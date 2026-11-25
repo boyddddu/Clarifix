@@ -1,0 +1,59 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+Line 1: Error E110: Name cannot start with a digit: 1stScore
+Line 3: Error E104: Identifier exceeds 32 characters: totalScoreOfAllStudentsInTheClasss
+Line 5: Error E110: Name cannot start with a digit: 12abc
+Line 7: Error E102: Unclosed string literal
+Line 9: Error E112: Unknown escape sequence
+Line 11: Error E113: Invalid character literal
+Line 13: Error E109: Curly quotes are not allowed.
+Line 13: Error E109: Curly quotes are not allowed.
+Line 15: Error E103: Unsupported character: @
+Line 15: Error E103: Unsupported character: $
+Line 15: Error E103: Unsupported character: &
+Line 15: Error E103: Unsupported character: |
+Line 15: Error E103: Unsupported character: {
+Line 15: Error E103: Unsupported character: }
+Line 17: ERROR E108: Bad indentation
+Line 18: ERROR E108: Bad indentation
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | ERROR                | 1stScore                                                     |
+| 3        | ERROR                | totalScoreOfAllStudentsInTheClasss                           |
+| 5        | ERROR                | 12abc                                                        |
+| 7        | ERROR                | "Hello                                                       |
+| 9        | ERROR                | "a\qb"                                                       |
+| 11       | ERROR                | 'AB'                                                         |
+| 13       | ERROR                |                                                              |
+| 13       | IDENTIFIER           | Hello                                                        |
+| 13       | ERROR                |                                                              |
+| 13       | NEWLINE              | \n                                                           |
+| 15       | ERROR                | @                                                            |
+| 15       | ERROR                | $                                                            |
+| 15       | ERROR                | &                                                            |
+| 15       | ERROR                | |                                                            |
+| 15       | ERROR                | {                                                            |
+| 15       | ERROR                | }                                                            |
+| 17       | ERROR                |                                                              |
+| 17       | CONST_INT            | 3                                                            |
+| 17       | IDENTIFIER           | space                                                        |
+| 17       | IDENTIFIER           | indentation                                                  |
+| 17       | NEWLINE              | \n                                                           |
+| 18       | ERROR                |                                                              |
+| 18       | CONST_INT            | 5                                                            |
+| 18       | IDENTIFIER           | space                                                        |
+| 18       | IDENTIFIER           | indentation                                                  |
+| 18       | NEWLINE              | \n                                                           |
+| 20       | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 16

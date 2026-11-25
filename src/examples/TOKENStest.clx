@@ -1,0 +1,62 @@
+
+# Arithmetic operators
+set a = 10.
+set b = 5.
+show a + b.
+show a - b.
+show a * b.
+show a / b.
+show a // b.
+show a % b.
+show a ^ b.
+
+# Compound assignment operators
+a += 1.
+a -= 1.
+a *= 2.
+a /= 2.
+
+# Relational operators
+show a == b.
+show a != b.
+show a < b.
+show a > b.
+show a <= b.
+show a >= b.
+
+# Boolean operators
+show true && false.
+show true || false.
+show !true.
+
+# Constants
+set integer = 100.
+set decimal = 12.5.
+set message = "Hello ClariFix".
+set letter = 'A'.
+set active = true.
+
+# Keywords and reserved words
+if true:
+    show "if".
+elif false:
+    show "elif".
+else:
+    show "else".
+
+while false:
+    show "while".
+
+for item in items:
+    show item.
+
+function greet():
+    show "Hello".
+    return.
+
+break
+continue
+
+# Noise words
+set score to 100.
+show score.
