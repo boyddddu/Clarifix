@@ -1,0 +1,63 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_while, Next lexeme is while
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <while-stmt>
+Next token is: CONST_BOOL, Next lexeme is true
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: NEWLINE, Next lexeme is 
+
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+Error E204 at line 1: Expected COLON but found NEWLINE
+   Exit <while-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: INDENT, Next lexeme is 
+
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: CONST_STRING, Next lexeme is "discard"
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Panic Mode: Recovery completed.
+
+Next token is: K_show, Next lexeme is show
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "kept"
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E204: Expected COLON but found NEWLINE
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

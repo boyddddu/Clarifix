@@ -1,0 +1,27 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is score
+Next token is: PERIOD, Next lexeme is .
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+No syntax errors found.
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.

@@ -1,0 +1,193 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_function, Next lexeme is function
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <function-stmt>
+Next token is: IDENTIFIER, Next lexeme is add
+Next token is: LEFT_PAREN, Next lexeme is (
+Next token is: IDENTIFIER, Next lexeme is a
+    Enter <param-list>
+Next token is: COMMA, Next lexeme is ,
+Next token is: IDENTIFIER, Next lexeme is b
+Next token is: RIGHT_PAREN, Next lexeme is )
+    Exit <param-list>
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+    Enter <block>
+Next token is: INDENT, Next lexeme is 
+
+Next token is: K_return, Next lexeme is return
+     Enter <statement>
+      Enter <simple-stmt>
+       Enter <return-stmt>
+Next token is: IDENTIFIER, Next lexeme is a
+        Enter <expr>
+         Enter <additive>
+          Enter <primary>
+Next token is: ADD, Next lexeme is +
+          Exit <primary>
+Next token is: IDENTIFIER, Next lexeme is b
+          Enter <primary>
+Next token is: PERIOD, Next lexeme is .
+          Exit <primary>
+         Exit <additive>
+        Exit <expr>
+       Exit <return-stmt>
+      Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+     Exit <statement>
+Next token is: K_set, Next lexeme is set
+    Exit <block>
+   Exit <function-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is nums
+Next token is: ASSIGN, Next lexeme is =
+Next token is: LEFT_BRACE, Next lexeme is {
+    Enter <expr>
+     Enter <primary>
+      Enter <list>
+Next token is: CONST_INT, Next lexeme is 1
+       Enter <expr>
+        Enter <primary>
+         Enter <literal>
+          Enter <number>
+Next token is: COMMA, Next lexeme is ,
+          Exit <number>
+         Exit <literal>
+        Exit <primary>
+       Exit <expr>
+Next token is: CONST_INT, Next lexeme is 2
+       Enter <expr>
+        Enter <primary>
+         Enter <literal>
+          Enter <number>
+Next token is: RIGHT_BRACE, Next lexeme is }
+          Exit <number>
+         Exit <literal>
+        Exit <primary>
+       Exit <expr>
+Next token is: PERIOD, Next lexeme is .
+      Exit <list>
+     Exit <primary>
+    Exit <expr>
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: IDENTIFIER, Next lexeme is add
+    Enter <expr>
+     Enter <primary>
+Next token is: LEFT_PAREN, Next lexeme is (
+      Enter <call-args>
+Next token is: IDENTIFIER, Next lexeme is nums
+       Enter <arg-list>
+        Enter <expr>
+         Enter <primary>
+Next token is: LEFT_BRACKET, Next lexeme is [
+          Enter <index>
+Next token is: CONST_INT, Next lexeme is 0
+           Enter <expr>
+            Enter <primary>
+             Enter <literal>
+              Enter <number>
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+              Exit <number>
+             Exit <literal>
+            Exit <primary>
+           Exit <expr>
+Next token is: COMMA, Next lexeme is ,
+          Exit <index>
+         Exit <primary>
+        Exit <expr>
+Next token is: IDENTIFIER, Next lexeme is nums
+        Enter <expr>
+         Enter <primary>
+Next token is: LEFT_BRACKET, Next lexeme is [
+          Enter <index>
+Next token is: CONST_INT, Next lexeme is 1
+           Enter <expr>
+            Enter <primary>
+             Enter <literal>
+              Enter <number>
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+              Exit <number>
+             Exit <literal>
+            Exit <primary>
+           Exit <expr>
+Next token is: RIGHT_PAREN, Next lexeme is )
+          Exit <index>
+         Exit <primary>
+        Exit <expr>
+       Exit <arg-list>
+Next token is: PERIOD, Next lexeme is .
+      Exit <call-args>
+     Exit <primary>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_call, Next lexeme is call
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <call-stmt>
+Next token is: IDENTIFIER, Next lexeme is add
+Next token is: LEFT_PAREN, Next lexeme is (
+    Enter <call-args>
+Next token is: CONST_INT, Next lexeme is 3
+     Enter <arg-list>
+      Enter <expr>
+       Enter <primary>
+        Enter <literal>
+         Enter <number>
+Next token is: COMMA, Next lexeme is ,
+         Exit <number>
+        Exit <literal>
+       Exit <primary>
+      Exit <expr>
+Next token is: CONST_INT, Next lexeme is 4
+      Enter <expr>
+       Enter <primary>
+        Enter <literal>
+         Enter <number>
+Next token is: RIGHT_PAREN, Next lexeme is )
+         Exit <number>
+        Exit <literal>
+       Exit <primary>
+      Exit <expr>
+     Exit <arg-list>
+Next token is: PERIOD, Next lexeme is .
+    Exit <call-args>
+   Exit <call-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+No syntax errors found.
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.

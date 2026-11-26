@@ -1,0 +1,12 @@
+PASS Syntax report header
+PASS Lexical report header
+PASS Grammar entry and exit indentation
+PASS Single consolidated section after program exit and before the final summary
+PASS Consolidated section appears only in the parser report
+PASS Lexical error, prompt, and save notifications excluded from the parser report
+PASS ERROR token retained in the parser report
+PASS E103 with the source line in the token table
+PASS Token table rows and visible newline escape
+ISSUE Report token lines render the newline as a visible lexeme
+
+Observed parser NEWLINE record: 'Next token is: NEWLINE, Next lexeme is \n\n'

@@ -1,0 +1,9 @@
+set score = 85.
+if score >= 90:
+    show "Excellent".
+elif score >= 80:
+    show "Very good".
+elif score >= 75:
+    show "Passed".
+else:
+    show "Try again".

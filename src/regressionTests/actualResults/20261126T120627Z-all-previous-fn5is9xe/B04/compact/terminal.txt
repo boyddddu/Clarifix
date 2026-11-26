@@ -1,0 +1,60 @@
+Enter ClariFix source filename: Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is a
+Next token is: PERIOD, Next lexeme is .
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_set, Next lexeme is set
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is b
+Next token is: ASSIGN, Next lexeme is =
+Next token is: CONST_INT, Next lexeme is 4
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+       Enter <number>
+Next token is: PERIOD, Next lexeme is .
+       Exit <number>
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: IDENTIFIER, Next lexeme is a
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <assign-stmt>
+Next token is: ASSIGN, Next lexeme is =
+    Enter <assign-op>
+Next token is: IDENTIFIER, Next lexeme is b
+    Exit <assign-op>
+    Enter <expr>
+     Enter <primary>
+Next token is: PERIOD, Next lexeme is .
+     Exit <primary>
+    Exit <expr>
+   Exit <assign-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.
+
+Token table report saved as: B04Output/B04_tokenTable.txt
+Syntax report saved as: B04Output/parserOutput.txt

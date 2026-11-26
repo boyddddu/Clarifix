@@ -1,0 +1,39 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_if                 | if                                                           |
+| 1        | CONST_BOOL           | true                                                         |
+| 1        | COLON                | :                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 2        | K_show               | show                                                         |
+| 2        | CONST_STRING         | "then"                                                       |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | DEDENT               |                                                              |
+| 3        | K_else               | else                                                         |
+| 3        | COLON                | :                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 4        | K_show               | show                                                         |
+| 4        | CONST_STRING         | "else"                                                       |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | DEDENT               |                                                              |
+| 5        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

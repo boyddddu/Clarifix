@@ -1,3 +1,2 @@
-show "Pili ka sa regressionTests/testCases/ ng mga example tas dito mo nalang i-paste sa test.clx".
-
-show "para test.clx nalang iinput mo  sa  terminal".
+set name = 1.1.1
+ask name

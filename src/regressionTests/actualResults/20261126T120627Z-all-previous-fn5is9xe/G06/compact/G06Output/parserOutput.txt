@@ -1,0 +1,34 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is count
+Next token is: ADD_ASSIGN, Next lexeme is +=
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Error E203 at line 1: Expected PERIOD but found ADD_ASSIGN
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E203: Expected PERIOD but found ADD_ASSIGN
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

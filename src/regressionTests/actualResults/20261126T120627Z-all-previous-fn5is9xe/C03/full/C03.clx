@@ -1,0 +1,8 @@
+if false:
+    show "one".
+elif false:
+    show "two".
+elif true:
+    show "three".
+else:
+    show "four".

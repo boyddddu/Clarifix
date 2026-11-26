@@ -1,0 +1,3 @@
+set a.
+set b = 4.
+a = b.

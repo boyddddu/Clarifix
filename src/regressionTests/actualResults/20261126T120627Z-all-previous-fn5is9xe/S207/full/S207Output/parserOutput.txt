@@ -1,0 +1,31 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: INDENT, Next lexeme is 
+Enter <program>
+ Enter <statement>
+Error E207 at line 1: Unexpected token INDENT
+ Exit <statement>
+
+Panic Mode: Recovering...
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Panic Mode: Recovery completed.
+
+Next token is: EOF, Next lexeme is EOF
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E207: Unexpected token INDENT
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

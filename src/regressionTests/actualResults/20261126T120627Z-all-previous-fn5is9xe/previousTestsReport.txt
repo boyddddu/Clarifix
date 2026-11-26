@@ -1,0 +1,155 @@
+ClariFix rerun of all previous cases on current sources
+Completed in Asia/Manila: 2026-11-26T20:06:44+08:00
+Inputs copied from the saved previous runs. Expectations read from the saved JSON files.
+Each case ran with both the full and compact grammar traces.
+The NEWLINE lexeme may be displayed as a line break in the parser trace.
+Source files unchanged during the run: True
+
+Group                           PASS  FAIL  NOT RUN
+Original regression cases          110       0       0
+Repository criteria tests           16       0       0
+Additional cases                     7       0       0
+
+Cases: 133 | Passed: 133 | Failed: 0 | Not run: 0
+Program executions: 266/266 | Crashes: 0 | Timeouts: 0
+
+GCC builds
+clarifix-full-compile.txt: successful, 0 warning(s), 0 error(s)
+clarifix-full-sanitized-compile.txt: successful, 0 warning(s), 0 error(s)
+clarifix-compact-compile.txt: successful, 0 warning(s), 0 error(s)
+clarifix-compact-sanitized-compile.txt: successful, 0 warning(s), 0 error(s)
+
+Individual cases
+PASS    B01 — Declare a variable without an initializer
+PASS    B02 — Initialize a variable and display it
+PASS    B03 — Read an identifier with ask
+PASS    B04 — Assign a variable to another variable
+PASS    B05 — Handle all four compound assignment operators
+PASS    B06 — Call a function with arguments as a statement
+PASS    C01 — One if body with four-space indentation
+PASS    C02 — If and else clauses
+PASS    C03 — Several elif clauses followed by else
+PASS    C04 — While loop with assignment and break
+PASS    C05 — For loop over a two-integer range
+PASS    C06 — For loop with negative endpoints and a step
+PASS    C07 — For loop over a list literal
+PASS    C08 — For loop over an indexed iterable
+PASS    C09 — Function with no parameters and a bare return
+PASS    C10 — Function with two parameters and a return value
+PASS    C11 — Tabs and spaces return to enclosing and global scopes
+PASS    E01 — Multiplication binds within the second additive term
+PASS    E02 — Parentheses place addition inside a multiplicative operand
+PASS    E03 — Subtraction chains in one left-associative additive production
+PASS    E04 — Exponentiation is right-recursive
+PASS    E05 — Unary minus binds outside exponentiation and can occur in the exponent
+PASS    E06 — NOT, AND and OR use distinct precedence levels
+PASS    E07 — Relational and arithmetic operands bind before equality
+PASS    E08 — Division, floor division and modulo chain at the term level
+PASS    E09 — Recognize decimal, escaped string, character, and call expression
+PASS    G01 — An equality chain requires explicit grouping
+PASS    G02 — A relational chain requires explicit grouping
+PASS    G03 — Unary plus is outside the negate production
+PASS    G04 — Ask cannot target a list index
+PASS    G05 — A set declaration cannot target a list index
+PASS    G06 — A set initializer requires plain assignment
+PASS    G07 — A call result cannot be immediately indexed
+PASS    G08 — An indexed expression cannot be immediately called
+PASS    G09 — A bare identifier call is not a call statement
+PASS    G10 — A trailing function-argument comma needs another expression
+PASS    G11 — A trailing parameter comma needs another identifier
+PASS    G12 — A range requires at least two endpoints
+PASS    G13 — A range permits at most three fields
+PASS    G14 — A range endpoint cannot be an arithmetic expression
+PASS    G15 — A for iterable cannot be a call expression
+PASS    G16 — A standalone list value is not a statement
+PASS    G17 — A standalone else must have a preceding if
+PASS    I01 — Malformed nested block with an associated DEDENT
+PASS    I02 — Multiple invalid indentation levels yield one syntax error for the region
+PASS    I03 — Use the indentation boundary when no associated DEDENT exists
+PASS    I04 — Resume directly at global scope while preserving the enclosing DEDENT
+PASS    I05 — Missing indentation still emits recovery messages without skipping tokens
+PASS    I06 — Valid nested blocks generate no diagnostics or recovery
+PASS    I07 — Malformed block with no DEDENT terminates at EOF
+PASS    I08 — Malformed elif block preserves a later valid elif and else
+PASS    L01 — Empty list literal
+PASS    L02 — List literal with expression elements
+PASS    L03 — Nested list literals
+PASS    L04 — Read a single indexed element
+PASS    L05 — Parse two chained indices on an expression
+PASS    L06 — Parse an arithmetic index on a compound assignment
+PASS    L07 — Assign to a doubly indexed list location
+PASS    L08 — Reject an empty index
+PASS    L09 — Reject a trailing list comma
+PASS    L10 — Reject a list with a missing comma
+PASS    N01 — Standalone and trailing line comments remain in the token table
+PASS    N02 — Inline block comment is ignored by the expression grammar
+PASS    N03 — Multiline block comment is stored from its opening line
+PASS    N04 — Report an unclosed block comment on its opening line
+PASS    N05 — Skip and report all four noise words
+PASS    N06 — Comment markers and noise words inside literals are ordinary text
+PASS    N07 — Reject an over-indented comment after a simple statement and recover
+PASS    N08 — Blank lines and noise-only lines at global scope are ignored
+PASS    P01 — Recover from a missing period at a newline
+PASS    P02 — Recover at a period and resume on the same line
+PASS    P03 — Skip trailing tokens of a malformed simple statement
+PASS    P04 — Recover from an unexpected indented block
+PASS    P05 — Resume in a valid block after a malformed local statement
+PASS    P06 — Preserve a block boundary after a syntax error on its final line
+PASS    P07 — Record independent errors in order and continue
+PASS    P08 — Recover at EOF after a missing period
+PASS    P09 — Recover after an invalid while header and skip its body
+PASS    P10 — Skip a malformed initial if header and its dependent clauses
+PASS    P11 — Recover from a lexical error surfaced as a parser ERROR token
+PASS    P12 — Reach the next line after a malformed nested expression
+PASS    R01 — Valid reports and overwrite of both seeded reports in an existing output folder
+PASS    R02 — Syntax report includes original error, recovery token stream, and consolidated copy
+PASS    R03 — Mixed diagnostics, with lexical errors restricted to the table and terminal
+PASS    S200 — Unexpected statement starter
+PASS    S201 — Missing declaration identifier
+PASS    S202 — Missing show expression
+PASS    S203 — Missing statement period
+PASS    S204 — Missing while header colon
+PASS    S205 — Block body on the header line
+PASS    S206 — Missing block indentation
+PASS    S207 — Unexpected top-level indentation
+PASS    S209 — Missing assignment operator
+PASS    S210 — Missing closing parenthesis
+PASS    S211 — Missing closing index bracket
+PASS    S212 — Missing closing list brace
+PASS    S213 — Missing opening call parenthesis
+PASS    S214 — Missing range comma
+PASS    S215 — Decimal where range integer is required
+PASS    S216 — Scalar where iterable is required
+PASS    S217 — Missing in keyword for a range
+PASS    W01 — Function and list program with statement and expression calls
+PASS    W02 — Nested loops with reassignment, conditional, and global output
+PASS    W03 — Input and branching around decimal and string literals
+PASS    W04 — Mixed valid program with CRLF input and no final newline
+PASS    W05 — Combined lexical errors, syntax errors, and subsequent valid statements
+PASS    Y01 — Exact section for a single missing period
+PASS    Y02 — Exact section for several errors in detection order
+PASS    Y03 — Exact no-error section
+PASS    Y04 — 105 recoverable errors, first 100 stored, with sanitizer verification
+PASS    T-05-input — Reject the extra decimal fragment and the unterminated ask statement
+PASS    T-06-output-combined — Parse a show expression combining a string and a variable
+PASS    T-06-output-string — Parse a show statement with a string literal
+PASS    T-06-output-variable — Parse a declaration followed by display of a variable
+PASS    T-07-assign-constant — Assign an integer constant to a declared variable
+PASS    T-07-assign-expression — Parse arithmetic precedence in an assignment
+PASS    T-07-assign-variable — Assign one declared variable to another
+PASS    T-08-if-elif-elif-else — Parse if, two elif clauses, and else as one conditional
+PASS    T-08-if-else — Parse an if and its else clause
+PASS    T-08-if — Parse a standalone if with a comparison and indented body
+PASS    T-09-for-nested — Parse both loop ranges and return to the enclosing and global scopes
+PASS    T-09-for-plain — Parse a two-integer range and one loop body
+PASS    T-10-declare-list — Declare a variable initialized with a three-element list
+PASS    T-10-declare-single — Declare a variable without an initializer
+PASS    T-10-declare-with-initializer — Declare a variable initialized with an integer
+PASS    T-11-panic-recovery — Recover from two intentional syntax errors and parse both subsequent statements
+PASS    A01-over-indented-noise — Reject an over-indented NOISE line and preserve the enclosing block
+PASS    A02-over-indented-comment — Reject an over-indented COMMENT line and preserve the enclosing block
+PASS    A03-aligned-noise-and-comment — Accept a correctly aligned noise word and block comment
+PASS    A04-malformed-nested-else — Skip both levels of a malformed else body and preserve enclosing and global statements
+PASS    A05-valid-nested-eof — Close two valid nested blocks at EOF with no final newline
+PASS    A06-identifier-32 — Accept and preserve a 32-character identifier
+PASS    A07-identifier-33 — Reject a 33-character identifier and recover to the next statement

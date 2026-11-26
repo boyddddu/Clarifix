@@ -1,0 +1,5 @@
+show "Missing period"
+show "Valid statement".
+show 10
+ask .
+show "Done".

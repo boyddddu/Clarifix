@@ -1,0 +1,52 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_show, Next lexeme is show
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_INT, Next lexeme is 1
+    Enter <expr>
+     Enter <relational>
+      Enter <primary>
+       Enter <literal>
+        Enter <number>
+Next token is: LESS_THAN, Next lexeme is <
+        Exit <number>
+       Exit <literal>
+      Exit <primary>
+Next token is: CONST_INT, Next lexeme is 2
+      Enter <primary>
+       Enter <literal>
+        Enter <number>
+Next token is: LESS_THAN, Next lexeme is <
+        Exit <number>
+       Exit <literal>
+      Exit <primary>
+     Exit <relational>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Error E203 at line 1: Expected PERIOD but found LESS_THAN
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 3
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E203: Expected PERIOD but found LESS_THAN
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

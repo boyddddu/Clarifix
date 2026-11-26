@@ -12,15 +12,15 @@ TOKEN TABLE
 +----------+----------------------+--------------------------------------------------------------+
 | Line     | Token                | Lexeme                                                       |
 +----------+----------------------+--------------------------------------------------------------+
-| 1        | K_show               | show                                                         |
-| 1        | CONST_STRING         | "Pili ka sa regressionTests/testCases/ ng mga example tas di |
-|          |                      | to mo nalang i-paste sa test.clx"                            |
-| 1        | PERIOD               | .                                                            |
+| 1        | K_set                | set                                                          |
+| 1        | IDENTIFIER           | name                                                         |
+| 1        | ASSIGN               | =                                                            |
+| 1        | CONST_DECIMAL        | 1.1                                                          |
+| 1        | CONST_DECIMAL        | .1                                                           |
 | 1        | NEWLINE              | \n                                                           |
-| 3        | K_show               | show                                                         |
-| 3        | CONST_STRING         | "para test.clx nalang iinput mo  sa  terminal"               |
-| 3        | PERIOD               | .                                                            |
-| 3        | EOF                  | EOF                                                          |
+| 2        | K_ask                | ask                                                          |
+| 2        | IDENTIFIER           | name                                                         |
+| 2        | EOF                  | EOF                                                          |
 +----------+----------------------+--------------------------------------------------------------+
 
 Total Errors: 0

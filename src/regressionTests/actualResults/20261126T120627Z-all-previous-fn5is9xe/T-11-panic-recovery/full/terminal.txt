@@ -1,0 +1,130 @@
+Enter ClariFix source filename: Next token is: K_show, Next lexeme is show
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "Missing period"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: NEWLINE, Next lexeme is 
+
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Error E203 at line 1: Expected PERIOD but found NEWLINE
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "Reached after the missing period"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_set, Next lexeme is set
+ Exit <statement>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: ASSIGN, Next lexeme is =
+Error E201 at line 3: Expected IDENTIFIER but found ASSIGN
+   Exit <set-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 2
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "Reached after the missing identifier"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 2
+Program contains syntax errors.
+
+Token table report saved as: 11-panic-recoveryOutput/11-panic-recovery_tokenTable.txt
+Syntax report saved as: 11-panic-recoveryOutput/parserOutput.txt

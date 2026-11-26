@@ -326,22 +326,16 @@ void skip_conditional_chain(void)
 /* Enter a grammar rule */
 void enter(const char *rule)
 {
-    for (int i = 0; i < parseDepth; i++)
-        tracePrint(" ");
-
-    tracePrint("Enter <%s>\n", rule);
+    traceRule(rule, parseDepth, 1);
     parseDepth++;
 }
 
 void leave(const char *rule)
 {
     parseDepth--;
-
-    for (int i = 0; i < parseDepth; i++)
-        tracePrint(" ");
-
-    tracePrint("Exit <%s>\n", rule);
+    traceRule(rule, parseDepth, 0);
 }
+
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -955,9 +949,11 @@ void block(void)
 /* <expr> -> <or-expr> */
 void expr(void)
 {
+    beginExpressionTrace(parseDepth);
     enter("expr");
     or_expr();
     leave("expr");
+    endExpressionTrace(panicMode);
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,65 @@
+Enter ClariFix source filename: Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is name
+Next token is: ASSIGN, Next lexeme is =
+Next token is: CONST_DECIMAL, Next lexeme is 1.1
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+               Enter <number>
+Next token is: CONST_DECIMAL, Next lexeme is .1
+               Exit <number>
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Error E203 at line 1: Expected PERIOD but found CONST_DECIMAL
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: IDENTIFIER, Next lexeme is name
+Next token is: EOF, Next lexeme is EOF
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+Error E203 at line 2: Expected PERIOD but found EOF
+ Exit <statement>
+
+Panic Mode: Recovering...
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 2
+Program contains syntax errors.
+
+Token table report saved as: 05-inputOutput/05-input_tokenTable.txt
+Syntax report saved as: 05-inputOutput/parserOutput.txt

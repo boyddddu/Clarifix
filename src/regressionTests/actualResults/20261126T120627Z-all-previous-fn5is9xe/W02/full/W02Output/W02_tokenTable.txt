@@ -1,0 +1,79 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_set                | set                                                          |
+| 1        | IDENTIFIER           | total                                                        |
+| 1        | ASSIGN               | =                                                            |
+| 1        | CONST_INT            | 0                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_for                | for                                                          |
+| 2        | IDENTIFIER           | i                                                            |
+| 2        | K_in                 | in                                                           |
+| 2        | LEFT_BRACKET         | [                                                            |
+| 2        | CONST_INT            | 1                                                            |
+| 2        | COMMA                | ,                                                            |
+| 2        | CONST_INT            | 3                                                            |
+| 2        | RIGHT_BRACKET        | ]                                                            |
+| 2        | COLON                | :                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 3        | K_for                | for                                                          |
+| 3        | IDENTIFIER           | j                                                            |
+| 3        | K_in                 | in                                                           |
+| 3        | LEFT_BRACKET         | [                                                            |
+| 3        | CONST_INT            | 1                                                            |
+| 3        | COMMA                | ,                                                            |
+| 3        | CONST_INT            | 2                                                            |
+| 3        | RIGHT_BRACKET        | ]                                                            |
+| 3        | COLON                | :                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 4        | K_if                 | if                                                           |
+| 4        | IDENTIFIER           | j                                                            |
+| 4        | EQUAL                | ==                                                           |
+| 4        | CONST_INT            | 2                                                            |
+| 4        | COLON                | :                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 5        | IDENTIFIER           | total                                                        |
+| 5        | ADD_ASSIGN           | +=                                                           |
+| 5        | IDENTIFIER           | i                                                            |
+| 5        | MULTIPLY             | *                                                            |
+| 5        | IDENTIFIER           | j                                                            |
+| 5        | PERIOD               | .                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | DEDENT               |                                                              |
+| 6        | K_else               | else                                                         |
+| 6        | COLON                | :                                                            |
+| 6        | NEWLINE              | \n                                                           |
+| 7        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 7        | R_continue           | continue                                                     |
+| 7        | PERIOD               | .                                                            |
+| 7        | NEWLINE              | \n                                                           |
+| 8        | DEDENT               |                                                              |
+| 8        | DEDENT               |                                                              |
+| 8        | DEDENT               |                                                              |
+| 8        | K_show               | show                                                         |
+| 8        | IDENTIFIER           | total                                                        |
+| 8        | PERIOD               | .                                                            |
+| 8        | NEWLINE              | \n                                                           |
+| 9        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

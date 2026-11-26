@@ -1,0 +1,46 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_while, Next lexeme is while
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <while-stmt>
+Next token is: CONST_BOOL, Next lexeme is true
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: COLON, Next lexeme is :
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+Next token is: NEWLINE, Next lexeme is 
+
+    Enter <block>
+Next token is: ERROR, Next lexeme is 
+
+Error E206 at line 2: Expected INDENT but found ERROR
+
+Panic Mode: Recovering...
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: CONST_STRING, Next lexeme is "skipped"
+Next token is: PERIOD, Next lexeme is .
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+    Exit <block>
+   Exit <while-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 2: Error E206: Expected INDENT but found ERROR
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

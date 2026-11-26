@@ -1,0 +1,2 @@
+gcc -std=c17 -Wall -Wextra -Wpedantic -DCLARIFIX_COMPACT_TRACE=0 /mnt/c/SCHOOL/PPL/Clarifix/src/main.c /mnt/c/SCHOOL/PPL/Clarifix/src/parser.c -o /mnt/c/SCHOOL/PPL/Clarifix/src/regressionTests/actualResults/20261126T115547Z-grammar-trace-f_lfhk24/clarifix-full-trace
+Exit: 0

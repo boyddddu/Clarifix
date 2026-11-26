@@ -1,0 +1,35 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | ADD_ASSIGN           | +=                                                           |
+| 1        | CONST_INT            | 1                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | SUB_ASSIGN           | -=                                                           |
+| 1        | CONST_INT            | 2                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | MULTIPLY_ASSIGN      | *=                                                           |
+| 1        | CONST_INT            | 3                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | DIVIDE_ASSIGN        | /=                                                           |
+| 1        | CONST_INT            | 4                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

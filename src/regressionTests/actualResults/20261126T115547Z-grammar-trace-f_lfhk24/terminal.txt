@@ -1,0 +1,55 @@
+Enter ClariFix source filename: Error E103: Unsupported character: @
+Next token is: ERROR, Next lexeme is @
+Enter <program>
+ Enter <statement>
+Error E200 at line 1: Unexpected token ERROR
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: IDENTIFIER, Next lexeme is age
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: NOISE, Next lexeme is the
+Next token is: CONST_STRING, Next lexeme is "kept"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: formatCheckOutput/formatCheck_tokenTable.txt
+Syntax report saved as: formatCheckOutput/parserOutput.txt

@@ -5,6 +5,7 @@
 
 #include <sys/stat.h>  // For creating folders and checking file types
 #include <errno.h>     // For identifying why mkdir() failed
+#include <stdint.h>
 #include <stdarg.h>  // Allows functions to accept a variable number of arguments
 
 #include "parser.h"
@@ -313,23 +314,228 @@ void storeError(int line, char *message)
     storedErrorCount++;
 }
 
-/* Print analysis messages to both the terminal and syntax report */
+#ifndef CLARIFIX_COMPACT_TRACE
+#define CLARIFIX_COMPACT_TRACE 1
+#endif
+
+typedef enum
+{
+    TRACE_ENTER,
+    TRACE_EXIT,
+    TRACE_MESSAGE,
+    TRACE_CONSOLE_MESSAGE
+} TraceKind;
+
+typedef struct
+{
+    TraceKind kind;
+    const char *rule;
+    const char *expectedChild;
+    size_t relatedRule;
+    int collapse;
+    char *message;
+    size_t length;
+} TraceEvent;
+
+static TraceEvent *traceEvents;
+static size_t traceCount;
+static size_t traceCapacity;
+static size_t openTraceRule;
+static size_t expressionTraceDepth;
+static int traceStartDepth;
+static int bufferingTrace;
+
+static const char *passThroughChild(const char *rule)
+{
+    static const char *const levels[] = {
+        "or-expr", "and-expr", "equality", "relational", "additive",
+        "term", "negate", "power", "primary"
+    };
+
+    for (size_t i = 0; i + 1 < sizeof levels / sizeof levels[0]; i++)
+    {
+        if (strcmp(rule, levels[i]) == 0)
+            return levels[i + 1];
+    }
+
+    return NULL;
+}
+
+static int appendTraceEvent(TraceEvent event)
+{
+    if (traceCount == traceCapacity)
+    {
+        if (traceCapacity > SIZE_MAX / sizeof *traceEvents / 2)
+            return 0;
+
+        size_t capacity = traceCapacity ? traceCapacity * 2 : 32;
+        TraceEvent *events = realloc(traceEvents, capacity * sizeof *events);
+        if (events == NULL)
+            return 0;
+
+        traceEvents = events;
+        traceCapacity = capacity;
+    }
+
+    traceEvents[traceCount++] = event;
+    return 1;
+}
+
+static void printRuleTrace(const char *rule, int depth, int entering)
+{
+    tracePrint("%*s%s <%s>\n", depth, "", entering ? "Enter" : "Exit", rule);
+}
+
+static void flushExpressionTrace(int compact)
+{
+    bufferingTrace = 0;
+    int depth = traceStartDepth;
+
+    for (size_t i = 0; i < traceCount; i++)
+    {
+        const TraceEvent *event = &traceEvents[i];
+        switch (event->kind)
+        {
+        case TRACE_ENTER:
+            if (!compact || !event->collapse)
+                printRuleTrace(event->rule, depth++, 1);
+            break;
+        case TRACE_EXIT:
+            if (!compact || !traceEvents[event->relatedRule].collapse)
+                printRuleTrace(event->rule, --depth, 0);
+            break;
+        case TRACE_MESSAGE:
+        case TRACE_CONSOLE_MESSAGE:
+            fwrite(event->message, 1, event->length, stdout);
+            if (event->kind == TRACE_MESSAGE && syntaxReport_fp != NULL)
+                fwrite(event->message, 1, event->length, syntaxReport_fp);
+            free(event->message);
+            break;
+        }
+    }
+
+    free(traceEvents);
+    traceEvents = NULL;
+    traceCount = 0;
+    traceCapacity = 0;
+}
+
+void beginExpressionTrace(int depth)
+{
+    if (CLARIFIX_COMPACT_TRACE && expressionTraceDepth++ == 0)
+    {
+        openTraceRule = SIZE_MAX;
+        traceStartDepth = depth;
+        bufferingTrace = 1;
+    }
+}
+
+void endExpressionTrace(int hadError)
+{
+    if (CLARIFIX_COMPACT_TRACE && --expressionTraceDepth == 0 && bufferingTrace)
+        flushExpressionTrace(!hadError);
+}
+
+void traceRule(const char *rule, int depth, int entering)
+{
+    if (bufferingTrace)
+    {
+        const TraceEvent event = {
+            .kind = entering ? TRACE_ENTER : TRACE_EXIT,
+            .rule = rule,
+            .expectedChild = entering ? passThroughChild(rule) : NULL,
+            .relatedRule = openTraceRule
+        };
+
+        if (appendTraceEvent(event))
+        {
+            if (entering)
+            {
+                if (openTraceRule != SIZE_MAX)
+                {
+                    TraceEvent *parent = &traceEvents[openTraceRule];
+                    /* Only one direct child matching the next level can collapse. */
+                    parent->collapse = parent->expectedChild != NULL &&
+                                       strcmp(parent->expectedChild, rule) == 0;
+                    parent->expectedChild = NULL;
+                }
+                openTraceRule = traceCount - 1;
+            }
+            else
+            {
+                openTraceRule = traceEvents[openTraceRule].relatedRule;
+            }
+            return;
+        }
+
+        flushExpressionTrace(0);
+    }
+
+    printRuleTrace(rule, depth, entering);
+}
+
+static int bufferTraceMessage(const char *format, va_list args, int consoleOnly)
+{
+    va_list copy;
+    va_copy(copy, args);
+    int length = vsnprintf(NULL, 0, format, copy);
+    va_end(copy);
+    if (length < 0)
+        return 0;
+
+    char *message = malloc((size_t)length + 1);
+    if (message == NULL)
+        return 0;
+
+    va_copy(copy, args);
+    int written = vsnprintf(message, (size_t)length + 1, format, copy);
+    va_end(copy);
+
+    const TraceEvent event = {
+        .kind = consoleOnly ? TRACE_CONSOLE_MESSAGE : TRACE_MESSAGE,
+        .message = message,
+        .length = (size_t)length
+    };
+    if (written == length && appendTraceEvent(event))
+        return 1;
+
+    free(message);
+    return 0;
+}
+
+static void printTraceMessage(const char *format, va_list args, int consoleOnly)
+{
+    if (bufferingTrace)
+    {
+        if (bufferTraceMessage(format, args, consoleOnly))
+            return;
+
+        flushExpressionTrace(0);
+    }
+
+    va_list copy;
+    va_copy(copy, args);
+    vprintf(format, copy);
+    va_end(copy);
+
+    if (!consoleOnly && syntaxReport_fp != NULL)
+        vfprintf(syntaxReport_fp, format, args);
+}
+
 void tracePrint(const char *format, ...)
 {
     va_list args;
-
-    /* Initialize arguments and print to the terminal */
     va_start(args, format);
-    vprintf(format, args);
+    printTraceMessage(format, args, 0);
     va_end(args);
+}
 
-    /* Write the same message to the syntax report if it is open */
-    if (syntaxReport_fp != NULL)
-    {
-        va_start(args, format);
-        vfprintf(syntaxReport_fp, format, args);
-        va_end(args);
-    }
+static void traceConsolePrint(const char *format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    printTraceMessage(format, args, 1);
+    va_end(args);
 }
 
 
@@ -725,7 +931,7 @@ void addChar()
 
     else if (!lexemeOverflow)
     {
-        printf("Error - lexeme is too long\n");
+        traceConsolePrint("Error - lexeme is too long\n");
 
         /* Store the error and its original line number */
         storeError(lineNumber, "Error - lexeme is too long");
@@ -799,7 +1005,7 @@ void getNonBlank()
         {
             indentationError = 1;
 
-            printf("ERROR E108: Bad indentation at line %d.\n", lineNumber);
+            traceConsolePrint("ERROR E108: Bad indentation at line %d.\n", lineNumber);
 
             /* Store the error and its original line number */
             storeError(lineNumber, "ERROR E108: Bad indentation");
@@ -949,7 +1155,7 @@ char *lex()
             {
             if (indentTop >= 99)
                 {
-                printf("ERROR E108: Maximum indentation depth exceeded at line %d.\n", lineNumber);
+                traceConsolePrint("ERROR E108: Maximum indentation depth exceeded at line %d.\n", lineNumber);
 
                 /* Store the error and its original line number */
                 storeError(lineNumber, "ERROR E108: Maximum indentation depth exceeded");
@@ -1002,7 +1208,7 @@ char *lex()
 
                     else
                     {
-                        printf("ERROR E108: Bad indentation at line %d.\n", lineNumber);
+                        traceConsolePrint("ERROR E108: Bad indentation at line %d.\n", lineNumber);
 
                         /* Store the error and its original line number */
                         storeError(lineNumber, "ERROR E108: Bad indentation");
@@ -1040,7 +1246,7 @@ char *lex()
 
             if (lexLen > 32)
             {
-                printf("Error E104: Identifier exceeds 32 characters: %s\n", lexeme);
+                traceConsolePrint("Error E104: Identifier exceeds 32 characters: %s\n", lexeme);
 
                 /* Store the error and its original line number */
                 char errorMessage[200];
@@ -1079,7 +1285,7 @@ char *lex()
                     getChar();
                 }
 
-                printf("Error E110: Name cannot start with a digit: %s\n", lexeme);
+                traceConsolePrint("Error E110: Name cannot start with a digit: %s\n", lexeme);
 
                 /* Store the error and its original line number */
                 char errorMessage[200];
@@ -1110,7 +1316,7 @@ char *lex()
                         getChar();
                     }
 
-                    printf("Error E111: Invalid decimal: %s\n", lexeme);
+                    traceConsolePrint("Error E111: Invalid decimal: %s\n", lexeme);
 
                     /* Store the error and its original line number */
                     char errorMessage[200];
@@ -1170,7 +1376,7 @@ char *lex()
                                         nextChar != '\'' &&
                                         nextChar != '\\')
                                     {
-                                        printf("Error E112: Unknown escape sequence\n");
+                                        traceConsolePrint("Error E112: Unknown escape sequence\n");
 
                                         /* Store the error and its original line number */
                                         storeError(lineNumber, "Error E112: Unknown escape sequence");
@@ -1198,7 +1404,7 @@ char *lex()
 
                         else
                         {
-                            printf("Error E102: Unclosed string literal\n");
+                            traceConsolePrint("Error E102: Unclosed string literal\n");
 
                             /* Store the error and its original line number */
                             storeError(lineNumber, "Error E102: Unclosed string literal");
@@ -1214,7 +1420,7 @@ char *lex()
 
                         if (nextChar == '\'')
                         {
-                            printf("Error E113: Empty character literal\n");
+                            traceConsolePrint("Error E113: Empty character literal\n");
 
                             /* Store the error and its original line number */
                             storeError(lineNumber, "Error E113: Empty character literal");
@@ -1236,7 +1442,7 @@ char *lex()
                                     nextChar != '\\')
                                 {
 
-                                printf("Error E112: Unknown escape sequence\n");
+                                traceConsolePrint("Error E112: Unknown escape sequence\n");
 
                                 /* Store the error and its original line number */
                                 storeError(lineNumber, "Error E112: Unknown escape sequence");
@@ -1274,7 +1480,7 @@ char *lex()
                                         nextChar == '\r' ||
                                         nextChar == '.')
                                 {
-                                    printf("Error E102: Unclosed character literal\n");
+                                    traceConsolePrint("Error E102: Unclosed character literal\n");
 
                                     /* Store the error and its original line number */
                                     storeError(lineNumber, "Error E102: Unclosed character literal");
@@ -1283,7 +1489,7 @@ char *lex()
                                 }
                                     else
                                     {
-                                        printf("Error E113: Invalid character literal\n");
+                                        traceConsolePrint("Error E113: Invalid character literal\n");
 
                                         /* Store the error and its original line number */
                                         storeError(lineNumber, "Error E113: Invalid character literal");
@@ -1410,7 +1616,7 @@ char *lex()
 
                         if (strcmp(nextToken, ERROR_TOKEN) == 0)
                         {
-                            printf("Error E106: Unclosed block comment\n");
+                            traceConsolePrint("Error E106: Unclosed block comment\n");
 
                             /* Store the error using the comment's starting line */
                             storeError(commentStartLine, "Error E106: Unclosed block comment");
@@ -1439,7 +1645,7 @@ char *lex()
 
                     else
                     {
-                    printf("Error E103: Unsupported character: &\n");
+                    traceConsolePrint("Error E103: Unsupported character: &\n");
 
                     /* Store the error and its original line number */
                     storeError(lineNumber, "Error E103: Unsupported character: &");
@@ -1461,7 +1667,7 @@ char *lex()
                     }
                     else
                     {
-                    printf("Error E103: Unsupported character: |\n");
+                    traceConsolePrint("Error E103: Unsupported character: |\n");
 
                     /* Store the error and its original line number */
                     storeError(lineNumber, "Error E103: Unsupported character: |");
@@ -1556,7 +1762,7 @@ char *lex()
                     (thirdByte == 0x98 || thirdByte == 0x99 ||
                     thirdByte == 0x9C || thirdByte == 0x9D))
                 {
-                    printf("Error E109: Curly quotes are not allowed.\n");
+                    traceConsolePrint("Error E109: Curly quotes are not allowed.\n");
                     storeError(lineNumber, "Error E109: Curly quotes are not allowed.");
                     lexLen = 0;
                     lexeme[0] = '\0';
@@ -1565,7 +1771,7 @@ char *lex()
                 }
                 else
                 {
-                printf("Error E103: Unsupported character.\n");
+                traceConsolePrint("Error E103: Unsupported character.\n");
 
                 /* Store the error and its original line number */
                 storeError(lineNumber, "Error E103: Unsupported character.");
@@ -1576,7 +1782,7 @@ char *lex()
             }
             else
             {
-                printf("Error E103: Unsupported character: %c\n", nextChar);
+                traceConsolePrint("Error E103: Unsupported character: %c\n", nextChar);
 
                 /* Store the error and its original line number */
                 char errorMessage[200];

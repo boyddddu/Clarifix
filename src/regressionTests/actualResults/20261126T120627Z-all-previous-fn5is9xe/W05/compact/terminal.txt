@@ -1,0 +1,193 @@
+Enter ClariFix source filename: Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Error E110: Name cannot start with a digit: 12abc
+Next token is: ERROR, Next lexeme is 12abc
+Error E201 at line 1: Expected IDENTIFIER but found ERROR
+   Exit <set-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: ASSIGN, Next lexeme is =
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Error E112: Unknown escape sequence
+Next token is: ERROR, Next lexeme is "bad\q"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+Error E202 at line 2: Expected an expression but found ERROR
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Error E113: Invalid character literal
+Next token is: ERROR, Next lexeme is 'AB'
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+Error E202 at line 3: Expected an expression but found ERROR
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Error E111: Invalid decimal: 1.2zz
+Next token is: ERROR, Next lexeme is 1.2zz
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+Error E202 at line 4: Expected an expression but found ERROR
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Error E102: Unclosed string literal
+Next token is: ERROR, Next lexeme is "unterminated
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+Error E202 at line 5: Expected an expression but found ERROR
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "kept"
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 5
+Program contains syntax errors.
+
+Token table report saved as: W05Output/W05_tokenTable.txt
+Syntax report saved as: W05Output/parserOutput.txt

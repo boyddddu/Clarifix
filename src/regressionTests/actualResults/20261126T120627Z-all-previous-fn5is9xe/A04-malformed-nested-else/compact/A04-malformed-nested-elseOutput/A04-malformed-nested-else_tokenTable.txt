@@ -1,0 +1,60 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_while              | while                                                        |
+| 1        | CONST_BOOL           | true                                                         |
+| 1        | COLON                | :                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 2        | K_if                 | if                                                           |
+| 2        | CONST_BOOL           | false                                                        |
+| 2        | COLON                | :                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 3        | K_show               | show                                                         |
+| 3        | CONST_STRING         | "first"                                                      |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | DEDENT               |                                                              |
+| 4        | K_else               | else                                                         |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 5        | K_while              | while                                                        |
+| 5        | CONST_BOOL           | true                                                         |
+| 5        | COLON                | :                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 6        | K_show               | show                                                         |
+| 6        | CONST_STRING         | "skip"                                                       |
+| 6        | PERIOD               | .                                                            |
+| 6        | NEWLINE              | \n                                                           |
+| 7        | DEDENT               |                                                              |
+| 7        | DEDENT               |                                                              |
+| 7        | K_show               | show                                                         |
+| 7        | CONST_STRING         | "kept outer"                                                 |
+| 7        | PERIOD               | .                                                            |
+| 7        | NEWLINE              | \n                                                           |
+| 8        | DEDENT               |                                                              |
+| 8        | K_show               | show                                                         |
+| 8        | CONST_STRING         | "kept global"                                                |
+| 8        | PERIOD               | .                                                            |
+| 8        | NEWLINE              | \n                                                           |
+| 9        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

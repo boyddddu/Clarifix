@@ -10,6 +10,9 @@ extern int syntaxErrorCount;
 
 /* Shared function for printing analysis messages */
 void tracePrint(const char *format, ...);
+void traceRule(const char *rule, int depth, int entering);
+void beginExpressionTrace(int depth);
+void endExpressionTrace(int hadError);
 
 #include <stdio.h>
 

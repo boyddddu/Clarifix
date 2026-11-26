@@ -1,0 +1,6 @@
+# report
+set matrix = {{1,2},{3,4}}.
+matrix[1][0] *= 2.
+while matrix[1][0] > 5:
+    break.
+show matrix[1][0].

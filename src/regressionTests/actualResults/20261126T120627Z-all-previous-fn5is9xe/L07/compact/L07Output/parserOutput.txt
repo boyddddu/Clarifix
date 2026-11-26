@@ -1,0 +1,64 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: IDENTIFIER, Next lexeme is matrix
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <assign-stmt>
+Next token is: LEFT_BRACKET, Next lexeme is [
+    Enter <index>
+Next token is: CONST_INT, Next lexeme is 1
+     Enter <expr>
+      Enter <primary>
+       Enter <literal>
+        Enter <number>
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+        Exit <number>
+       Exit <literal>
+      Exit <primary>
+     Exit <expr>
+Next token is: LEFT_BRACKET, Next lexeme is [
+    Exit <index>
+    Enter <index>
+Next token is: CONST_INT, Next lexeme is 0
+     Enter <expr>
+      Enter <primary>
+       Enter <literal>
+        Enter <number>
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+        Exit <number>
+       Exit <literal>
+      Exit <primary>
+     Exit <expr>
+Next token is: ASSIGN, Next lexeme is =
+    Exit <index>
+    Enter <assign-op>
+Next token is: CONST_INT, Next lexeme is 7
+    Exit <assign-op>
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+       Enter <number>
+Next token is: PERIOD, Next lexeme is .
+       Exit <number>
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+   Exit <assign-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+No syntax errors found.
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.

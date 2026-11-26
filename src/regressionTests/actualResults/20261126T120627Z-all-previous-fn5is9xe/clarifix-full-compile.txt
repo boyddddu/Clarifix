@@ -1,0 +1,2 @@
+Command: ['gcc', '-std=c17', '-Wall', '-Wextra', '-Wpedantic', '-g', '-O0', '-DCLARIFIX_COMPACT_TRACE=0', '/mnt/c/SCHOOL/PPL/Clarifix/src/main.c', '/mnt/c/SCHOOL/PPL/Clarifix/src/parser.c', '-o', '/mnt/c/SCHOOL/PPL/Clarifix/src/regressionTests/actualResults/20261126T120627Z-all-previous-fn5is9xe/clarifix-full']
+Exit code: 0

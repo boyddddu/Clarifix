@@ -1,0 +1,4 @@
+if true:
+    show "before".
+        /* comment only */
+    show "after".

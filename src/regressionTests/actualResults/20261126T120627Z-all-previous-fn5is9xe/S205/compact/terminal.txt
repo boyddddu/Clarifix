@@ -1,0 +1,37 @@
+Enter ClariFix source filename: Next token is: K_if, Next lexeme is if
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <if-stmt>
+Next token is: CONST_BOOL, Next lexeme is true
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: COLON, Next lexeme is :
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+Next token is: K_show, Next lexeme is show
+    Enter <block>
+Error E205 at line 1: Expected NEWLINE but found K_show
+    Exit <block>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+   Exit <if-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: S205Output/S205_tokenTable.txt
+Syntax report saved as: S205Output/parserOutput.txt

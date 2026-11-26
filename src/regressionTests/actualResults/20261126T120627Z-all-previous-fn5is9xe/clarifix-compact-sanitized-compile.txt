@@ -1,0 +1,2 @@
+Command: ['gcc', '-std=c17', '-Wall', '-Wextra', '-Wpedantic', '-g', '-O0', '-fsanitize=address,undefined,bounds', '-fno-sanitize-recover=all', '-fno-omit-frame-pointer', '-no-pie', '/mnt/c/SCHOOL/PPL/Clarifix/src/main.c', '/mnt/c/SCHOOL/PPL/Clarifix/src/parser.c', '-o', '/mnt/c/SCHOOL/PPL/Clarifix/src/regressionTests/actualResults/20261126T120627Z-all-previous-fn5is9xe/clarifix-compact-sanitized']
+Exit code: 0

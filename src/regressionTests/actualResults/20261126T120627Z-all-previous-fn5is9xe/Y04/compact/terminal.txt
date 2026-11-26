@@ -1,0 +1,1602 @@
+Enter ClariFix source filename: Next token is: K_ask, Next lexeme is ask
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 1: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 2: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 3: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 4: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 5: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 6: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 7: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 8: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 9: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 10: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 11: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 12: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 13: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 14: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 15: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 16: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 17: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 18: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 19: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 20: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 21: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 22: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 23: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 24: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 25: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 26: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 27: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 28: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 29: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 30: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 31: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 32: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 33: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 34: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 35: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 36: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 37: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 38: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 39: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 40: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 41: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 42: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 43: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 44: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 45: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 46: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 47: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 48: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 49: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 50: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 51: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 52: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 53: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 54: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 55: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 56: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 57: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 58: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 59: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 60: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 61: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 62: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 63: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 64: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 65: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 66: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 67: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 68: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 69: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 70: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 71: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 72: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 73: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 74: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 75: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 76: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 77: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 78: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 79: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 80: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 81: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 82: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 83: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 84: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 85: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 86: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 87: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 88: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 89: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 90: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 91: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 92: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 93: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 94: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 95: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 96: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 97: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 98: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 99: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 100: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 101: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 102: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 103: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 104: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_ask, Next lexeme is ask
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: PERIOD, Next lexeme is .
+Error E201 at line 105: Expected IDENTIFIER but found PERIOD
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: K_show, Next lexeme is show
+Panic Mode: Recovery completed.
+
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "Done"
+    Enter <expr>
+     Enter <primary>
+      Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+      Exit <literal>
+     Exit <primary>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 105
+Program contains syntax errors.
+
+Token table report saved as: Y04Output/Y04_tokenTable.txt
+Syntax report saved as: Y04Output/parserOutput.txt

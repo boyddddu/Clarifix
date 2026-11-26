@@ -1,0 +1,78 @@
+Enter ClariFix source filename: Next token is: K_call, Next lexeme is call
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <call-stmt>
+Next token is: IDENTIFIER, Next lexeme is f
+Next token is: LEFT_PAREN, Next lexeme is (
+    Enter <call-args>
+Next token is: CONST_INT, Next lexeme is 1
+     Enter <arg-list>
+      Enter <expr>
+       Enter <or-expr>
+        Enter <and-expr>
+         Enter <equality>
+          Enter <relational>
+           Enter <additive>
+            Enter <term>
+             Enter <negate>
+              Enter <power>
+               Enter <primary>
+                Enter <literal>
+                 Enter <number>
+Next token is: COMMA, Next lexeme is ,
+                 Exit <number>
+                Exit <literal>
+               Exit <primary>
+              Exit <power>
+             Exit <negate>
+            Exit <term>
+           Exit <additive>
+          Exit <relational>
+         Exit <equality>
+        Exit <and-expr>
+       Exit <or-expr>
+      Exit <expr>
+Next token is: RIGHT_PAREN, Next lexeme is )
+      Enter <expr>
+       Enter <or-expr>
+        Enter <and-expr>
+         Enter <equality>
+          Enter <relational>
+           Enter <additive>
+            Enter <term>
+             Enter <negate>
+              Enter <power>
+               Enter <primary>
+Error E202 at line 1: Expected an expression but found RIGHT_PAREN
+               Exit <primary>
+              Exit <power>
+             Exit <negate>
+            Exit <term>
+           Exit <additive>
+          Exit <relational>
+         Exit <equality>
+        Exit <and-expr>
+       Exit <or-expr>
+      Exit <expr>
+     Exit <arg-list>
+    Exit <call-args>
+   Exit <call-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: G10Output/G10_tokenTable.txt
+Syntax report saved as: G10Output/parserOutput.txt

@@ -1,0 +1,37 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_set                | set                                                          |
+| 1        | IDENTIFIER           | score                                                        |
+| 1        | ASSIGN               | =                                                            |
+| 1        | CONST_INT            | 85                                                           |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_if                 | if                                                           |
+| 2        | IDENTIFIER           | score                                                        |
+| 2        | GREATER_EQUAL        | >=                                                           |
+| 2        | CONST_INT            | 75                                                           |
+| 2        | COLON                | :                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 3        | K_show               | show                                                         |
+| 3        | CONST_STRING         | "Passed"                                                     |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | DEDENT               |                                                              |
+| 4        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

@@ -1,0 +1,9 @@
+if false:
+    show "first".
+elif false
+    show "skipped".
+elif true:
+    show "later elif".
+else:
+    show "later else".
+show "done".

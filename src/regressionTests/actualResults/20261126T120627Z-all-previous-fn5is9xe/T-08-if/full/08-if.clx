@@ -1,0 +1,3 @@
+set score = 85.
+if score >= 75:
+    show "Passed".

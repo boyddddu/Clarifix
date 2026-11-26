@@ -1,0 +1,6 @@
+Full trace build diagnostics bytes: 0
+Full trace parse exit code: 0
+Full rule trace balanced with correct indent: True
+Collapsed pass-through expression rules in order: or-expr, and-expr, equality, relational, additive, term, negate, power
+Projected full parser report exactly matches compact report: True
+Full and compact token tables match byte for byte: True
