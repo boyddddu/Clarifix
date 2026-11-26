@@ -1,0 +1,25 @@
+Enter ClariFix source filename: Next token is: INDENT, Next lexeme is 
+Enter <program>
+ Enter <statement>
+Error E207 at line 1: Unexpected token INDENT
+ Exit <statement>
+
+Panic Mode: Recovering...
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: S207Output/S207_tokenTable.txt
+Syntax report saved as: S207Output/parserOutput.txt

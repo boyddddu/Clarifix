@@ -1,0 +1,41 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_set                | set                                                          |
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_set                | set                                                          |
+| 2        | IDENTIFIER           | c                                                            |
+| 2        | ASSIGN               | =                                                            |
+| 2        | CONST_INT            | 4                                                            |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | IDENTIFIER           | a                                                            |
+| 3        | ASSIGN               | =                                                            |
+| 3        | CONST_INT            | 3                                                            |
+| 3        | ADD                  | +                                                            |
+| 3        | CONST_INT            | 2                                                            |
+| 3        | MULTIPLY             | *                                                            |
+| 3        | CONST_INT            | 5                                                            |
+| 3        | DIVIDE               | /                                                            |
+| 3        | CONST_INT            | 5                                                            |
+| 3        | ADD                  | +                                                            |
+| 3        | IDENTIFIER           | c                                                            |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

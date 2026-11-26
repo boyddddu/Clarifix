@@ -1,0 +1,11 @@
+{
+  "description": "Decimal where range integer is required",
+  "syntax": [
+    [
+      1,
+      "E215",
+      "Expected CONST_INT but found CONST_DECIMAL"
+    ]
+  ],
+  "function": "range_int"
+}

@@ -1,0 +1,8 @@
+while true:
+    if false:
+        show "first".
+    else
+        while true:
+            show "skip".
+    show "kept outer".
+show "kept global".

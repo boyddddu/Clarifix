@@ -1,0 +1,11 @@
+{
+  "description": "A relational chain requires explicit grouping",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found LESS_THAN"
+    ]
+  ],
+  "function": "relational"
+}

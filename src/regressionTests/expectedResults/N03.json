@@ -1,0 +1,37 @@
+{
+  "description": "Multiline block comment is stored from its opening line",
+  "sequences": [
+    [
+      [
+        1,
+        "COMMENT",
+        "/* heading\ncontinued */"
+      ]
+    ],
+    [
+      [
+        3,
+        "K_show",
+        "show"
+      ],
+      [
+        3,
+        "CONST_STRING",
+        "\"after\""
+      ],
+      [
+        3,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      0
+    ]
+  ]
+}

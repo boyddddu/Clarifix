@@ -1,0 +1,14 @@
+{
+  "description": "Nested list literals",
+  "rules": {
+    "list": 3
+  },
+  "ancestors": [
+    [
+      "list",
+      "{",
+      "list",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Missing range comma",
+  "syntax": [
+    [
+      1,
+      "E214",
+      "Expected COMMA but found CONST_INT"
+    ]
+  ],
+  "function": "range"
+}

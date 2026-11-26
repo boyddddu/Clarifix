@@ -1,0 +1,37 @@
+{
+  "description": "Use the indentation boundary when no associated DEDENT exists",
+  "lexical": [
+    [
+      2,
+      "E108",
+      "Bad indentation"
+    ]
+  ],
+  "syntax": [
+    [
+      2,
+      "E206",
+      "Expected INDENT but found ERROR"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "layout": [],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skipped\""
+      ],
+      "following": "\"kept\"",
+      "dedent": "none",
+      "skip": true
+    }
+  ],
+  "function": "recover_malformed_body"
+}

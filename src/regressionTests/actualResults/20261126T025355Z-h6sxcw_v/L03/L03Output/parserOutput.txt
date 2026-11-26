@@ -1,0 +1,203 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: IDENTIFIER, Next lexeme is matrix
+Next token is: ASSIGN, Next lexeme is =
+Next token is: LEFT_BRACE, Next lexeme is {
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <list>
+Next token is: LEFT_BRACE, Next lexeme is {
+               Enter <expr>
+                Enter <or-expr>
+                 Enter <and-expr>
+                  Enter <equality>
+                   Enter <relational>
+                    Enter <additive>
+                     Enter <term>
+                      Enter <negate>
+                       Enter <power>
+                        Enter <primary>
+                         Enter <list>
+Next token is: CONST_INT, Next lexeme is 1
+                          Enter <expr>
+                           Enter <or-expr>
+                            Enter <and-expr>
+                             Enter <equality>
+                              Enter <relational>
+                               Enter <additive>
+                                Enter <term>
+                                 Enter <negate>
+                                  Enter <power>
+                                   Enter <primary>
+                                    Enter <literal>
+                                     Enter <number>
+Next token is: COMMA, Next lexeme is ,
+                                     Exit <number>
+                                    Exit <literal>
+                                   Exit <primary>
+                                  Exit <power>
+                                 Exit <negate>
+                                Exit <term>
+                               Exit <additive>
+                              Exit <relational>
+                             Exit <equality>
+                            Exit <and-expr>
+                           Exit <or-expr>
+                          Exit <expr>
+Next token is: CONST_INT, Next lexeme is 2
+                          Enter <expr>
+                           Enter <or-expr>
+                            Enter <and-expr>
+                             Enter <equality>
+                              Enter <relational>
+                               Enter <additive>
+                                Enter <term>
+                                 Enter <negate>
+                                  Enter <power>
+                                   Enter <primary>
+                                    Enter <literal>
+                                     Enter <number>
+Next token is: RIGHT_BRACE, Next lexeme is }
+                                     Exit <number>
+                                    Exit <literal>
+                                   Exit <primary>
+                                  Exit <power>
+                                 Exit <negate>
+                                Exit <term>
+                               Exit <additive>
+                              Exit <relational>
+                             Exit <equality>
+                            Exit <and-expr>
+                           Exit <or-expr>
+                          Exit <expr>
+Next token is: COMMA, Next lexeme is ,
+                         Exit <list>
+                        Exit <primary>
+                       Exit <power>
+                      Exit <negate>
+                     Exit <term>
+                    Exit <additive>
+                   Exit <relational>
+                  Exit <equality>
+                 Exit <and-expr>
+                Exit <or-expr>
+               Exit <expr>
+Next token is: LEFT_BRACE, Next lexeme is {
+               Enter <expr>
+                Enter <or-expr>
+                 Enter <and-expr>
+                  Enter <equality>
+                   Enter <relational>
+                    Enter <additive>
+                     Enter <term>
+                      Enter <negate>
+                       Enter <power>
+                        Enter <primary>
+                         Enter <list>
+Next token is: CONST_INT, Next lexeme is 3
+                          Enter <expr>
+                           Enter <or-expr>
+                            Enter <and-expr>
+                             Enter <equality>
+                              Enter <relational>
+                               Enter <additive>
+                                Enter <term>
+                                 Enter <negate>
+                                  Enter <power>
+                                   Enter <primary>
+                                    Enter <literal>
+                                     Enter <number>
+Next token is: COMMA, Next lexeme is ,
+                                     Exit <number>
+                                    Exit <literal>
+                                   Exit <primary>
+                                  Exit <power>
+                                 Exit <negate>
+                                Exit <term>
+                               Exit <additive>
+                              Exit <relational>
+                             Exit <equality>
+                            Exit <and-expr>
+                           Exit <or-expr>
+                          Exit <expr>
+Next token is: CONST_INT, Next lexeme is 4
+                          Enter <expr>
+                           Enter <or-expr>
+                            Enter <and-expr>
+                             Enter <equality>
+                              Enter <relational>
+                               Enter <additive>
+                                Enter <term>
+                                 Enter <negate>
+                                  Enter <power>
+                                   Enter <primary>
+                                    Enter <literal>
+                                     Enter <number>
+Next token is: RIGHT_BRACE, Next lexeme is }
+                                     Exit <number>
+                                    Exit <literal>
+                                   Exit <primary>
+                                  Exit <power>
+                                 Exit <negate>
+                                Exit <term>
+                               Exit <additive>
+                              Exit <relational>
+                             Exit <equality>
+                            Exit <and-expr>
+                           Exit <or-expr>
+                          Exit <expr>
+Next token is: RIGHT_BRACE, Next lexeme is }
+                         Exit <list>
+                        Exit <primary>
+                       Exit <power>
+                      Exit <negate>
+                     Exit <term>
+                    Exit <additive>
+                   Exit <relational>
+                  Exit <equality>
+                 Exit <and-expr>
+                Exit <or-expr>
+               Exit <expr>
+Next token is: PERIOD, Next lexeme is .
+              Exit <list>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <set-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+No syntax errors found.
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.

@@ -1,0 +1,325 @@
+ClariFix automated regression test report
+Run directory: actualResults/20261126T022123Z-3ka6mjiq
+UTC run timestamp: 2026-11-26T02:21:32+00:00
+Phase 1 consists of 95 reconstructed cases. Phases 2–4 add 15 cases.
+Expected results SHA-256: 8ab3a65ee8de8cf578b6902524cea4af3edb303381da66aa324b2605df63ac69
+Sources unchanged during run: yes
+
+Category                                PASS FAIL  NOT RUN
+------------------------------------------------------------
+1 / Basic statements                       6    0        0
+1 / Expressions                            9    0        0
+1 / Lists and indexing                    10    0        0
+1 / Compound statements                   11    0        0
+1 / Comments and noise words               7    1        0
+1 / Syntax error codes                    17    0        0
+1 / Grammar restrictions                  17    0        0
+1 / Panic mode error recovery             12    0        0
+1 / Whole programs                         5    0        0
+2 / Improved panic mode recovery           7    1        0
+3 / Report generation                      3    0        0
+4 / Syntax error summary                   4    0        0
+
+Total executed: 110 / 110
+Total passed: 108
+Total failed: 2
+Total not run: 0
+Crashes: 0
+Timeouts: 0
+Elapsed seconds: 8.67
+
+Compilation
+- actualResults/20261126T022123Z-3ka6mjiq/clarifix-test-compile.txt | successful | 0 warnings | 0 errors
+- actualResults/20261126T022123Z-3ka6mjiq/clarifix-sanitized-compile.txt | successful | 0 warnings | 0 errors
+
+Expectation basis
+The original 95 case files were unavailable. The B, E, L, C, N, S, G, P,
+and W cases are reconstructions. The I, R, and Y cases implement the new
+recovery, report, and summary requirements.
+
+The expected results were written before the first test execution. They
+come from three sources:
+
+- Explicit requirements for panic mode and reports, including the exact
+  summary examples and the 100-entry storage limit.
+- The grammar productions written above parser functions in src/parser.c
+  and the example programs in src/criteria-tests(Parser). The parser
+  functions help identify observable rule names and diagnostic codes.
+- The token examples in src/examples/TOKENStest.clx and errorSample.clx
+  plus the token definitions in main.c. Some bundled example files
+  intentionally include errors or predate current statement syntax.
+
+The repository README documents the build environment. No standalone
+grammar specification was present in this checkout. Case-specific
+assumptions are recorded in the corresponding expectedResults JSON.
+
+The scope is lexical and syntactic. Declarations, calls, returns, list
+elements, and loop controls are checked against the grammar. Operator
+binding is checked through the parse-tree shape reconstructed from
+grammar traces. For additive and term chains, repeated children of one
+production establish the flat grammar shape for a conventional left
+fold. Exponentiation is checked for nested right-hand recursion.
+
+Indentation expectations use four-column tabs and four-space examples.
+The first token of the next source line may already be lookahead at a
+recovery boundary when there is no associated DEDENT. Where there is an
+associated DEDENT, the explicit requirement places recovery completion
+before retrieval of the next token. Synthetic indentation and error
+token lexemes have no documented representation. Cases involving them
+assert token names and source line numbers where those are meaningful.
+
+The syntax-code cases exercise 17 codes reachable via source programs.
+E208 is assigned to a missing DEDENT. Normal lexer EOF handling emits
+the outstanding DEDENTs, and block() stops at DEDENT or EOF. No supported
+source-only way to reach the missing-DEDENT branch was identified. An
+I-series case tests a malformed block for which the lexer never opened
+an indentation level and therefore produces no associated DEDENT.
+
+The report checks compare original errors with expected diagnostics and
+independently compare consolidated rows with the original trace order.
+Token names are compared across both reports for every case. Selected
+token sequences, positions, and lexemes also have fixed expectations.
+R01 seeds both report files with stale text in a pre-existing folder and
+checks that both files were overwritten and the folder retained.
+
+Run the preserved cases with python3 run_tests.py in WSL Ubuntu with GCC
+and its sanitizer runtimes installed. Each run gets a separate directory
+in actualResults. The top-level regressionTestReport.txt is the latest
+result. An exit status of 1 indicates failures or cases that did not run.
+
+Individual results
+PASS    B01  Declare a variable without an initializer  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 5 token rows. 0 completed recovery episodes.
+PASS    B02  Initialize a variable and display it  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    B03  Read an identifier with ask  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 5 token rows. 0 completed recovery episodes.
+PASS    B04  Assign a variable to another variable  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 16 token rows. 0 completed recovery episodes.
+PASS    B05  Handle all four compound assignment operators  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 18 token rows. 0 completed recovery episodes.
+PASS    B06  Call a function with arguments as a statement  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 10 token rows. 0 completed recovery episodes.
+PASS    E01  Multiplication binds within the second additive term  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 9 token rows. 0 completed recovery episodes.
+PASS    E02  Parentheses place addition inside a multiplicative operand  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    E03  Subtraction chains in one left-associative additive production  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 9 token rows. 0 completed recovery episodes.
+PASS    E04  Exponentiation is right-recursive  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 9 token rows. 0 completed recovery episodes.
+PASS    E05  Unary minus binds outside exponentiation and can occur in the exponent  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 9 token rows. 0 completed recovery episodes.
+PASS    E06  NOT, AND and OR use distinct precedence levels  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 10 token rows. 0 completed recovery episodes.
+PASS    E07  Relational and arithmetic operands bind before equality  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    E08  Division, floor division and modulo chain at the term level  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    E09  Recognize decimal, escaped string, character, and call expression  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 12 token rows. 0 completed recovery episodes.
+PASS    L01  Empty list literal  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 8 token rows. 0 completed recovery episodes.
+PASS    L02  List literal with expression elements  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 15 token rows. 0 completed recovery episodes.
+PASS    L03  Nested list literals  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 19 token rows. 0 completed recovery episodes.
+PASS    L04  Read a single indexed element  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 8 token rows. 0 completed recovery episodes.
+PASS    L05  Parse two chained indices on an expression  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    L06  Parse an arithmetic index on a compound assignment  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    L07  Assign to a doubly indexed list location  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 12 token rows. 0 completed recovery episodes.
+PASS    L08  Reject an empty index  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 7 token rows. 1 completed recovery episodes.
+PASS    L09  Reject a trailing list comma  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    L10  Reject a list with a missing comma  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    C01  One if body with four-space indentation  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    C02  If and else clauses  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 20 token rows. 0 completed recovery episodes.
+PASS    C03  Several elif clauses followed by else  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 40 token rows. 0 completed recovery episodes.
+PASS    C04  While loop with assignment and break  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 17 token rows. 0 completed recovery episodes.
+PASS    C05  For loop over a two-integer range  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 17 token rows. 0 completed recovery episodes.
+PASS    C06  For loop with negative endpoints and a step  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 20 token rows. 0 completed recovery episodes.
+PASS    C07  For loop over a list literal  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 17 token rows. 0 completed recovery episodes.
+PASS    C08  For loop over an indexed iterable  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 16 token rows. 0 completed recovery episodes.
+PASS    C09  Function with no parameters and a bare return  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 12 token rows. 0 completed recovery episodes.
+PASS    C10  Function with two parameters and a return value  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 18 token rows. 0 completed recovery episodes.
+PASS    C11  Tabs and spaces return to enclosing and global scopes  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 25 token rows. 0 completed recovery episodes.
+PASS    N01  Standalone and trailing line comments remain in the token table  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 7 token rows. 0 completed recovery episodes.
+PASS    N02  Inline block comment is ignored by the expression grammar  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 8 token rows. 0 completed recovery episodes.
+PASS    N03  Multiline block comment is stored from its opening line  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 6 token rows. 0 completed recovery episodes.
+PASS    N04  Report an unclosed block comment on its opening line  (0.024s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 6 token rows. 1 completed recovery episodes.
+PASS    N05  Skip and report all four noise words  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 16 token rows. 0 completed recovery episodes.
+PASS    N06  Comment markers and noise words inside literals are ordinary text  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 9 token rows. 0 completed recovery episodes.
+FAIL    N07  A comment-only line within a block does not change its indentation  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 18 token rows. 1 completed recovery episodes.
+PASS    N08  Blank lines and noise-only lines at global scope are ignored  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 7 token rows. 0 completed recovery episodes.
+PASS    S200  Unexpected statement starter  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 5 token rows. 1 completed recovery episodes.
+PASS    S201  Missing declaration identifier  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 6 token rows. 1 completed recovery episodes.
+PASS    S202  Missing show expression  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 4 token rows. 1 completed recovery episodes.
+PASS    S203  Missing statement period  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 4 token rows. 1 completed recovery episodes.
+PASS    S204  Missing while header colon  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 10 token rows. 1 completed recovery episodes.
+PASS    S205  Block body on the header line  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    S206  Missing block indentation  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    S207  Unexpected top-level indentation  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 7 token rows. 1 completed recovery episodes.
+PASS    S209  Missing assignment operator  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 5 token rows. 1 completed recovery episodes.
+PASS    S210  Missing closing parenthesis  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    S211  Missing closing index bracket  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 7 token rows. 1 completed recovery episodes.
+PASS    S212  Missing closing list brace  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    S213  Missing opening call parenthesis  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 5 token rows. 1 completed recovery episodes.
+PASS    S214  Missing range comma  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 16 token rows. 1 completed recovery episodes.
+PASS    S215  Decimal where range integer is required  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 17 token rows. 1 completed recovery episodes.
+PASS    S216  Scalar where iterable is required  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 13 token rows. 1 completed recovery episodes.
+PASS    S217  Missing in keyword for a range  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 16 token rows. 1 completed recovery episodes.
+PASS    G01  An equality chain requires explicit grouping  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    G02  A relational chain requires explicit grouping  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    G03  Unary plus is outside the negate production  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 6 token rows. 1 completed recovery episodes.
+PASS    G04  Ask cannot target a list index  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    G05  A set declaration cannot target a list index  (0.026s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 10 token rows. 1 completed recovery episodes.
+PASS    G06  A set initializer requires plain assignment  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 7 token rows. 1 completed recovery episodes.
+PASS    G07  A call result cannot be immediately indexed  (0.025s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 10 token rows. 1 completed recovery episodes.
+PASS    G08  An indexed expression cannot be immediately called  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 10 token rows. 1 completed recovery episodes.
+PASS    G09  A bare identifier call is not a call statement  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 6 token rows. 1 completed recovery episodes.
+PASS    G10  A trailing function-argument comma needs another expression  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    G11  A trailing parameter comma needs another identifier  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 14 token rows. 1 completed recovery episodes.
+PASS    G12  A range requires at least two endpoints  (0.015s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 15 token rows. 1 completed recovery episodes.
+PASS    G13  A range permits at most three fields  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 21 token rows. 1 completed recovery episodes.
+PASS    G14  A range endpoint cannot be an arithmetic expression  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 19 token rows. 1 completed recovery episodes.
+PASS    G15  A for iterable cannot be a call expression  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 15 token rows. 1 completed recovery episodes.
+PASS    G16  A standalone list value is not a statement  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    G17  A standalone else must have a preceding if  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 10 token rows. 1 completed recovery episodes.
+PASS    P01  Recover from a missing period at a newline  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    P02  Recover at a period and resume on the same line  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 7 token rows. 1 completed recovery episodes.
+PASS    P03  Skip trailing tokens of a malformed simple statement  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 11 token rows. 1 completed recovery episodes.
+PASS    P04  Recover from an unexpected indented block  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 11 token rows. 1 completed recovery episodes.
+PASS    P05  Resume in a valid block after a malformed local statement  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 18 token rows. 1 completed recovery episodes.
+PASS    P06  Preserve a block boundary after a syntax error on its final line  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 14 token rows. 1 completed recovery episodes.
+PASS    P07  Record independent errors in order and continue  (0.023s) 2 original syntax errors, 2 eligible for storage, 0 lexical errors, 15 token rows. 2 completed recovery episodes.
+PASS    P08  Recover at EOF after a missing period  (0.024s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 3 token rows. 1 completed recovery episodes.
+PASS    P09  Recover after an invalid while header and skip its body  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 14 token rows. 1 completed recovery episodes.
+PASS    P10  Skip a malformed initial if header and its dependent clauses  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 33 token rows. 1 completed recovery episodes.
+PASS    P11  Recover from a lexical error surfaced as a parser ERROR token  (0.023s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    P12  Reach the next line after a malformed nested expression  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 12 token rows. 1 completed recovery episodes.
+PASS    W01  Function and list program with statement and expression calls  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 52 token rows. 0 completed recovery episodes.
+PASS    W02  Nested loops with reassignment, conditional, and global output  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 58 token rows. 0 completed recovery episodes.
+PASS    W03  Input and branching around decimal and string literals  (0.024s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 46 token rows. 0 completed recovery episodes.
+PASS    W04  Mixed valid program with CRLF input and no final newline  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 57 token rows. 0 completed recovery episodes.
+PASS    W05  Combined lexical errors, syntax errors, and subsequent valid statements  (0.023s) 5 original syntax errors, 5 eligible for storage, 5 lexical errors, 26 token rows. 5 completed recovery episodes.
+PASS    I01  Malformed nested block with an associated DEDENT  (0.024s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 30 token rows. 1 completed recovery episodes.
+PASS    I02  Multiple invalid indentation levels yield one syntax error for the region  (0.023s) 1 original syntax errors, 1 eligible for storage, 2 lexical errors, 25 token rows. 1 completed recovery episodes.
+PASS    I03  Use the indentation boundary when no associated DEDENT exists  (0.024s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 14 token rows. 1 completed recovery episodes.
+PASS    I04  Resume directly at global scope while preserving the enclosing DEDENT  (0.023s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 20 token rows. 1 completed recovery episodes.
+PASS    I05  Missing indentation still emits recovery messages without skipping tokens  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 9 token rows. 1 completed recovery episodes.
+PASS    I06  Valid nested blocks generate no diagnostics or recovery  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 25 token rows. 0 completed recovery episodes.
+PASS    I07  Malformed block with no DEDENT terminates at EOF  (0.023s) 1 original syntax errors, 1 eligible for storage, 1 lexical errors, 9 token rows. 1 completed recovery episodes.
+FAIL    I08  Malformed elif block preserves a later valid elif and else  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 43 token rows. 1 completed recovery episodes.
+PASS    R01  Valid reports and overwrite of both seeded reports in an existing output folder  (0.023s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    R02  Syntax report includes original error, recovery token stream, and consolidated copy  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 11 token rows. 1 completed recovery episodes.
+PASS    R03  Mixed diagnostics, with lexical errors restricted to the table and terminal  (0.015s) 2 original syntax errors, 2 eligible for storage, 1 lexical errors, 12 token rows. 2 completed recovery episodes.
+PASS    Y01  Exact section for a single missing period  (0.023s) 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 8 token rows. 1 completed recovery episodes.
+PASS    Y02  Exact section for several errors in detection order  (0.024s) 3 original syntax errors, 3 eligible for storage, 0 lexical errors, 18 token rows. 3 completed recovery episodes.
+PASS    Y03  Exact no-error section  (0.015s) 0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows. 0 completed recovery episodes.
+PASS    Y04  105 recoverable errors, first 100 stored, with sanitizer verification  (0.072s) AddressSanitizer, UndefinedBehaviorSanitizer, and bounds instrumentation enabled. 105 original syntax errors, 100 eligible for storage, 0 lexical errors, 320 token rows. 105 completed recovery episodes.
+
+Failures and cases that did not run
+
+FAIL N07 — A comment-only line within a block does not change its indentation
+Classification: Specification assumption; see the note below.
+Relevant functions: lex / getNonBlank / block.
+Possible cause: Inspect the relevant functions where the captured behavior diverges from the checks.
+Captured output: actualResults/20261126T022123Z-3ka6mjiq/N07
+Complete source (N07.clx):
+----- BEGIN SOURCE -----
+if true:
+    show "before".
+        # comment only
+    show "after".
+----- END SOURCE -----
+Predefined expectations:
+{
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"before\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      1
+    ]
+  ],
+  "assumption": "The repository has no layout rule for a comment-only line indented farther than its surrounding block. This test treats comment-only lines as layout-neutral.",
+  "syntax": [],
+  "lexical": []
+}
+Actual observations:
+- 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 18 token rows.
+- 1 completed recovery episodes.
+Failed checks:
+- Original parser errors in detection order. Expected []. Observed [(3, 'E207', 'Unexpected token INDENT')].
+- Exact consolidated syntax error section. Expected 'No syntax errors found.\n'. Observed 'Line 3: Error E207: Unexpected token INDENT\n'.
+- Parser analysis summary. Expected 'Total Syntax Errors: 0\nNo syntax errors found.\n'. Observed 'Total Syntax Errors: 1\nProgram contains syntax errors.\n'.
+- Terminal syntax summary count. Expected 1. Observed 0.
+- Indentation token sequence. Expected [(2, 'INDENT'), (5, 'DEDENT')]. Observed [(2, 'INDENT'), (3, 'INDENT'), (4, 'DEDENT'), (5, 'DEDENT')].
+- Recovery episodes in a valid program. Expected 0. Observed 1.
+
+FAIL I08 — Malformed elif block preserves a later valid elif and else
+Classification: Expectation mismatch; see the checks and evidence below.
+Relevant functions: if_stmt / skip_clause / skip_block.
+Possible cause: Inspect the relevant functions where the captured behavior diverges from the checks.
+Captured output: actualResults/20261126T022123Z-3ka6mjiq/I08
+Complete source (I08.clx):
+----- BEGIN SOURCE -----
+if false:
+    show "first".
+elif false
+    show "skipped".
+elif true:
+    show "later elif".
+else:
+    show "later else".
+show "done".
+----- END SOURCE -----
+Predefined expectations:
+{
+  "syntax": [
+    [
+      3,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"first\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"later elif\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"later else\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"done\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skipped\""
+      ],
+      "following": "\"later elif\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ],
+  "lexical": []
+}
+Actual observations:
+- 1 original syntax errors, 1 eligible for storage, 0 lexical errors, 43 token rows.
+- 1 completed recovery episodes.
+Failed checks:
+- Recovery completed after retrieving the token(s) following its DEDENT: [('K_elif', 'elif')].

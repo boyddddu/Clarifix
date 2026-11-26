@@ -1,0 +1,15 @@
+{
+  "description": "Assign to a doubly indexed list location",
+  "children": [
+    [
+      "assign-stmt",
+      "matrix",
+      [
+        "index",
+        "index",
+        "assign-op",
+        "expr"
+      ]
+    ]
+  ]
+}

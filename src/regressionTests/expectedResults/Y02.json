@@ -1,0 +1,36 @@
+{
+  "description": "Exact section for several errors in detection order",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ],
+    [
+      3,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ],
+    [
+      4,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Valid statement\"",
+      0
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Done\"",
+      0
+    ]
+  ],
+  "recovery_count": 3,
+  "function": "synchronize / syntax_error / writeSyntaxErrors"
+}

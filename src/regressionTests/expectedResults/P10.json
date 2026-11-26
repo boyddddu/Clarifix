@@ -1,0 +1,32 @@
+{
+  "description": "Skip a malformed initial if header and its dependent clauses",
+  "syntax": [
+    [
+      1,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"bad if\"",
+        "\"bad elif\"",
+        "\"bad else\""
+      ],
+      "following": "\"kept\"",
+      "dedent": null,
+      "skip": true
+    }
+  ],
+  "function": "if_stmt / skip_conditional_chain",
+  "assumption": "The project does not specify whether a malformed initial if header invalidates its dependent clauses. This baseline treats the malformed chain as a unit."
+}

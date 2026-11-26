@@ -1,0 +1,34 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_show               | show                                                         |
+| 1        | CONST_STRING         | "Missing period"                                             |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_show               | show                                                         |
+| 2        | CONST_STRING         | "Reached after the missing period"                           |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | K_set                | set                                                          |
+| 3        | ASSIGN               | =                                                            |
+| 3        | CONST_INT            | 2                                                            |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | K_show               | show                                                         |
+| 4        | CONST_STRING         | "Reached after the missing identifier"                       |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

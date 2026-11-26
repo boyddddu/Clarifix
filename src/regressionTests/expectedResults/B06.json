@@ -1,0 +1,53 @@
+{
+  "description": "Call a function with arguments as a statement",
+  "rules": {
+    "call-stmt": 1,
+    "call-args": 1,
+    "arg-list": 1,
+    "expr": 2
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_call",
+        "call"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "greet"
+      ],
+      [
+        1,
+        "LEFT_PAREN",
+        "("
+      ],
+      [
+        1,
+        "CONST_STRING",
+        "\"Ana\""
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ],
+      [
+        1,
+        "RIGHT_PAREN",
+        ")"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

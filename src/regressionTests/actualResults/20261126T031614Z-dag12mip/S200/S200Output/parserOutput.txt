@@ -1,0 +1,28 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: ADD, Next lexeme is +
+Enter <program>
+ Enter <statement>
+Error E200 at line 1: Unexpected token ADD
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E200: Unexpected token ADD
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

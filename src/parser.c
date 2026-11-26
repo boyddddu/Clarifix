@@ -10,6 +10,10 @@ extern int lineNumber;
 extern char *lex(void);
 extern int tokenLine;
 
+extern int currentIndent;
+extern int indentTop;
+extern int indentStack[100];
+
 
 
 int parseDepth = 0; //pang indentation sa output
@@ -49,6 +53,17 @@ int match(const char *expected)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int syntaxErrorCount = 0;
 int panicMode = 0;
+
+/* Maximum number of syntax errors to store */
+#define MAX_SYNTAX_ERRORS 100
+
+/* Array for storing formatted syntax error messages */
+char syntaxErrorMessages[MAX_SYNTAX_ERRORS][256];
+
+/* Number of syntax errors currently stored */
+int storedSyntaxErrorCount = 0;
+
+
 
 const char *getSyntaxErrorCode(const char *expected)
 {
@@ -137,13 +152,61 @@ void syntax_error(const char *expected)
                  "Unexpected token %s", nextToken);
     }
 
-    /* Print the syntax error */
-    printf("Error %s at line %d: %s\n",
-           code, tokenLine, message);
+    /* Display and record the syntax error in the parser trace */
+    tracePrint("Error %s at line %d: %s\n",
+            code, tokenLine, message);
 
+    /* Store the syntax error for the summary section */
+    if (storedSyntaxErrorCount < MAX_SYNTAX_ERRORS)
+    {
+        /* Format and store the line number, error code, and message */
+        snprintf(syntaxErrorMessages[storedSyntaxErrorCount],
+                sizeof(syntaxErrorMessages[storedSyntaxErrorCount]),
+                "Line %d: Error %s: %s",
+                tokenLine, code, message);
+
+        /* Move to the next available storage position */
+        storedSyntaxErrorCount++;
+    }
+
+    /* Increment the total number of syntax errors */
     syntaxErrorCount++;
+
+    /* Activate panic mode error recovery */
     panicMode = 1;
+
 }
+
+/* Write all stored syntax errors to the syntax report */
+void writeSyntaxErrors(FILE *report_fp)
+{
+    /* Write the syntax errors section header */
+    fprintf(report_fp, "\n---------------\n");
+    fprintf(report_fp, "SYNTAX ERRORS\n");
+    fprintf(report_fp, "---------------\n");
+
+    /* Check if no syntax errors were detected */
+    if (syntaxErrorCount == 0)
+    {
+        fprintf(report_fp, "No syntax errors found.\n");
+    }
+    else
+    {
+        /* Write each stored syntax error */
+        for (int i = 0; i < storedSyntaxErrorCount; i++)
+        {
+            fprintf(report_fp, "%s\n", syntaxErrorMessages[i]);
+        }
+
+        /* Report errors that exceeded the storage limit */
+        if (syntaxErrorCount > storedSyntaxErrorCount)
+        {
+            fprintf(report_fp, "\n%d additional errors not listed.\n",
+                    syntaxErrorCount - storedSyntaxErrorCount);
+        }
+    }
+}
+
 
 /* Check and consume a required token */
 int expect(const char *expected)
@@ -156,31 +219,43 @@ int expect(const char *expected)
     return 0;
 }
 
-/* Skip an invalid indented block */
-/* Skip an invalid indented block */
-void skip_block(void)
+/* Start at INDENT and leave the matching DEDENT for the caller. */
+int skip_block(void)
 {
     int recoveryDepth = 0;
 
-    printf("Panic Mode: Skipping malformed block.\n");
+    tracePrint("Panic Mode: Skipping malformed block.\n");
 
-    do
+    while (!check("EOF"))
     {
         if (check("INDENT"))
             recoveryDepth++;
-
         else if (check("DEDENT"))
+        {
             recoveryDepth--;
+            if (recoveryDepth == 0)
+                return 1;
+        }
 
         advance();
+    }
 
-    } while (recoveryDepth > 0 && !check("EOF"));
+    return 0;
+}
+
+static void finish_recovery(int consumeDedent)
+{
+    panicMode = 0;
+    tracePrint("Panic Mode: Recovery completed.\n\n");
+
+    if (consumeDedent)
+        advance();
 }
 
 /* Panic-mode error recovery */
 void synchronize(void)
 {
-    printf("\nPanic Mode: Recovering...\n");
+    tracePrint("\nPanic Mode: Recovering...\n");
 
     while (!check("PERIOD") &&
            !check("NEWLINE") &&
@@ -198,16 +273,12 @@ void synchronize(void)
         match("NEWLINE");
 
     /* Skip an associated malformed block */
-    if (check("INDENT"))
-        skip_block();
-
-    panicMode = 0;
-
-    printf("Panic Mode: Recovery completed.\n\n");
+    int consumeDedent = check("INDENT") && skip_block();
+    finish_recovery(consumeDedent);
 }
 
 /* Skip a conditional header and its associated block */
-void skip_clause(void)
+int skip_clause(void)
 {
     while (!check("NEWLINE") &&
            !check("INDENT") &&
@@ -219,31 +290,35 @@ void skip_clause(void)
 
     match("NEWLINE");
 
-    if (check("INDENT"))
-        skip_block();
+    return check("INDENT") && skip_block();
+}
+
+static void recover_clause(void)
+{
+    tracePrint("\nPanic Mode: Recovering...\n");
+    finish_recovery(skip_clause());
 }
 
 /* Skip the entire malformed conditional chain */
 void skip_conditional_chain(void)
 {
-    printf("\nPanic Mode: Recovering...\n");
-    printf("Panic Mode: Skipping malformed conditional chain.\n");
+    tracePrint("\nPanic Mode: Recovering...\n");
+    tracePrint("Panic Mode: Skipping malformed conditional chain.\n");
 
-    skip_clause();
+    if (skip_clause())
+        advance();
 
     while (match("K_elif"))
     {
-        skip_clause();
+        if (skip_clause())
+            advance();
     }
 
+    int consumeDedent = 0;
     if (match("K_else"))
-    {
-        skip_clause();
-    }
+        consumeDedent = skip_clause();
 
-    panicMode = 0;
-
-    printf("Panic Mode: Recovery completed.\n\n");
+    finish_recovery(consumeDedent);
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -252,9 +327,9 @@ void skip_conditional_chain(void)
 void enter(const char *rule)
 {
     for (int i = 0; i < parseDepth; i++)
-        printf(" ");
+        tracePrint(" ");
 
-    printf("Enter <%s>\n", rule);
+    tracePrint("Enter <%s>\n", rule);
     parseDepth++;
 }
 
@@ -263,9 +338,9 @@ void leave(const char *rule)
     parseDepth--;
 
     for (int i = 0; i < parseDepth; i++)
-        printf(" ");
+        tracePrint(" ");
 
-    printf("Exit <%s>\n", rule);
+    tracePrint("Exit <%s>\n", rule);
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -309,10 +384,12 @@ void list(void);
 void literal(void);
 void number(void);
 
-void skip_block(void);
+int skip_block(void);
 void synchronize(void);
-void skip_clause(void);
+int skip_clause(void);
 void skip_conditional_chain(void);
+
+
 
 /* <program> -> { <statement> } EOF */
 void program(void)
@@ -650,14 +727,7 @@ void if_stmt(void)
                 block();
 
             if (panicMode)
-            {
-                printf("\nPanic Mode: Recovering...\n");
-
-                skip_clause();
-                panicMode = 0;
-
-                printf("Panic Mode: Recovery completed.\n\n");
-            }
+                recover_clause();
         }
 
         /* Optional else clause */
@@ -667,14 +737,7 @@ void if_stmt(void)
                 block();
 
             if (panicMode)
-            {
-                printf("\nPanic Mode: Recovering...\n");
-
-                skip_clause();
-                panicMode = 0;
-
-                printf("Panic Mode: Recovery completed.\n\n");
-            }
+                recover_clause();
         }
     }
 
@@ -795,11 +858,52 @@ void param_list(void)
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+void recover_malformed_body(int parentDepth, int parentIndent)
+{
+    int consumeDedent = 0;
+
+    tracePrint("\nPanic Mode: Recovering...\n");
+    tracePrint("Panic Mode: Skipping malformed block.\n");
+
+    while (!check("EOF"))
+    {
+        if (check("DEDENT"))
+        {
+            if (indentTop < parentDepth)
+                break;
+
+            if (indentTop == parentDepth)
+            {
+                consumeDedent = 1;
+                break;
+            }
+        }
+        else if (!check("NEWLINE") &&
+                 currentIndent <= parentIndent)
+        {
+            break;
+        }
+
+        advance();
+    }
+
+    panicMode = 0;
+
+    tracePrint("Panic Mode: Recovery completed.\n\n");
+
+    if (consumeDedent)
+        advance();
+}
+
 /* <block> -> NEWLINE INDENT <statement> { <statement> } DEDENT */
 /* <block> -> NEWLINE INDENT <statement> { <statement> } DEDENT */
 void block(void)
 {
     enter("block");
+
+    int parentDepth = indentTop;
+    int parentIndent = indentStack[parentDepth];
 
     if (!expect("NEWLINE"))
     {
@@ -809,8 +913,18 @@ void block(void)
 
     if (!expect("INDENT"))
     {
-        /* Preserve the next token for the enclosing scope */
-        panicMode = 0;
+        if (check("ERROR") && currentIndent > parentIndent)
+        {
+            recover_malformed_body(parentDepth, parentIndent);
+        }
+        else
+        {
+            tracePrint("\nPanic Mode: Recovering...\n");
+
+            panicMode = 0;
+
+            tracePrint("Panic Mode: Recovery completed.\n\n");
+        }
 
         leave("block");
         return;
@@ -835,6 +949,7 @@ void block(void)
 
     leave("block");
 }
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 /* <expr> -> <or-expr> */

@@ -1,0 +1,11 @@
+{
+  "description": "A set declaration cannot target a list index",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found LEFT_BRACKET"
+    ]
+  ],
+  "function": "set_stmt"
+}

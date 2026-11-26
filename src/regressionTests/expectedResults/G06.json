@@ -1,0 +1,11 @@
+{
+  "description": "A set initializer requires plain assignment",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found ADD_ASSIGN"
+    ]
+  ],
+  "function": "set_stmt"
+}

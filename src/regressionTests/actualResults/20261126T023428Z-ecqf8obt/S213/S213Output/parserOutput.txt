@@ -1,0 +1,34 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_call, Next lexeme is call
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <call-stmt>
+Next token is: IDENTIFIER, Next lexeme is hello
+Next token is: PERIOD, Next lexeme is .
+    Enter <call-args>
+Error E213 at line 1: Expected LEFT_PAREN but found PERIOD
+    Exit <call-args>
+   Exit <call-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E213: Expected LEFT_PAREN but found PERIOD
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

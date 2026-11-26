@@ -1,0 +1,5 @@
+while true:
+    if true:
+        show "deep".
+    show "outer".
+show "global".

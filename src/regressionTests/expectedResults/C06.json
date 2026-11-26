@@ -1,0 +1,56 @@
+{
+  "description": "For loop with negative endpoints and a step",
+  "rules": {
+    "range-int": 3,
+    "continue-stmt": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "LEFT_BRACKET",
+        "["
+      ],
+      [
+        1,
+        "SUBTRACT",
+        "-"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "3"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "SUBTRACT",
+        "-"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "1"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ],
+      [
+        1,
+        "RIGHT_BRACKET",
+        "]"
+      ]
+    ]
+  ]
+}

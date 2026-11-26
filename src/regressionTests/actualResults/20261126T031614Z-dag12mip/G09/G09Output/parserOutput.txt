@@ -1,0 +1,35 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: IDENTIFIER, Next lexeme is hello
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <assign-stmt>
+Next token is: LEFT_PAREN, Next lexeme is (
+    Enter <assign-op>
+Error E209 at line 1: Expected an assignment operator but found LEFT_PAREN
+    Exit <assign-op>
+   Exit <assign-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: RIGHT_PAREN, Next lexeme is )
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E209: Expected an assignment operator but found LEFT_PAREN
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

@@ -1,0 +1,11 @@
+{
+  "description": "Function and list program with statement and expression calls",
+  "rules": {
+    "function-stmt": 1,
+    "return-stmt": 1,
+    "list": 1,
+    "index": 2,
+    "call-args": 2,
+    "call-stmt": 1
+  }
+}

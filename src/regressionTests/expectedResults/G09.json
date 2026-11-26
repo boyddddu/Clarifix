@@ -1,0 +1,11 @@
+{
+  "description": "A bare identifier call is not a call statement",
+  "syntax": [
+    [
+      1,
+      "E209",
+      "Expected an assignment operator but found LEFT_PAREN"
+    ]
+  ],
+  "function": "assign_stmt"
+}

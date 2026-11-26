@@ -1,0 +1,55 @@
+{
+  "description": "Valid reports and overwrite of both seeded reports in an existing output folder",
+  "reuse": true,
+  "rules": {
+    "set-stmt": 1,
+    "show-stmt": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_set",
+        "set"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "x"
+      ],
+      [
+        1,
+        "ASSIGN",
+        "="
+      ],
+      [
+        1,
+        "CONST_INT",
+        "10"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ],
+    [
+      [
+        2,
+        "K_show",
+        "show"
+      ],
+      [
+        2,
+        "CONST_STRING",
+        "\"valid\""
+      ],
+      [
+        2,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "function": "main / writeTokenTable / tracePrint"
+}

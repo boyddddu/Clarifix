@@ -1,0 +1,6 @@
+if true:
+    while true:
+      show "first skipped".
+        show "also skipped".
+    show "enclosing".
+show "global".

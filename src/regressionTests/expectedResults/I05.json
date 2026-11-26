@@ -1,0 +1,28 @@
+{
+  "description": "Missing indentation still emits recovery messages without skipping tokens",
+  "syntax": [
+    [
+      2,
+      "E206",
+      "Expected INDENT but found K_show"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "layout": [],
+  "recoveries": [
+    {
+      "inside": [],
+      "following": "\"kept\"",
+      "dedent": null,
+      "empty": true
+    }
+  ],
+  "function": "block"
+}

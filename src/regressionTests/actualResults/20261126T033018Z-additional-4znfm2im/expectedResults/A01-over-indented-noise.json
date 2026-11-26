@@ -1,0 +1,63 @@
+{
+  "description": "Reject an over-indented NOISE line and preserve the enclosing block",
+  "syntax": [
+    [
+      3,
+      "E207",
+      "Unexpected token INDENT"
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ],
+  "rules": {
+    "block": 1,
+    "show-stmt": 2
+  },
+  "sequences": [
+    [
+      [
+        3,
+        "NOISE",
+        "to"
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"before\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      1
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [],
+      "following": "\"after\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ]
+}

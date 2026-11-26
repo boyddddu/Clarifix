@@ -1,0 +1,11 @@
+{
+  "description": "An indexed expression cannot be immediately called",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found LEFT_PAREN"
+    ]
+  ],
+  "function": "primary"
+}

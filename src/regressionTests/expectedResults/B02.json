@@ -1,0 +1,53 @@
+{
+  "description": "Initialize a variable and display it",
+  "rules": {
+    "set-stmt": 1,
+    "show-stmt": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_set",
+        "set"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "_score2"
+      ],
+      [
+        1,
+        "ASSIGN",
+        "="
+      ],
+      [
+        1,
+        "CONST_INT",
+        "42"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ],
+    [
+      [
+        2,
+        "K_show",
+        "show"
+      ],
+      [
+        2,
+        "IDENTIFIER",
+        "_score2"
+      ],
+      [
+        2,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "description": "Preserve a block boundary after a syntax error on its final line",
+  "syntax": [
+    [
+      2,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "DEDENT"
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "block / synchronize"
+}

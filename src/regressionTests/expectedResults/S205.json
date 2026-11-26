@@ -1,0 +1,11 @@
+{
+  "description": "Block body on the header line",
+  "syntax": [
+    [
+      1,
+      "E205",
+      "Expected NEWLINE but found K_show"
+    ]
+  ],
+  "function": "block"
+}

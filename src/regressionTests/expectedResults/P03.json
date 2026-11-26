@@ -1,0 +1,28 @@
+{
+  "description": "Skip trailing tokens of a malformed simple statement",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found ASSIGN"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"discard\""
+      ],
+      "following": "\"kept\"",
+      "dedent": null
+    }
+  ],
+  "function": "set_stmt / synchronize"
+}

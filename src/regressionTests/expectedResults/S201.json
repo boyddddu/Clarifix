@@ -1,0 +1,11 @@
+{
+  "description": "Missing declaration identifier",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found ASSIGN"
+    ]
+  ],
+  "function": "set_stmt"
+}

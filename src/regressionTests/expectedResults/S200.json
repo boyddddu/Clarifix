@@ -1,0 +1,11 @@
+{
+  "description": "Unexpected statement starter",
+  "syntax": [
+    [
+      1,
+      "E200",
+      "Unexpected token ADD"
+    ]
+  ],
+  "function": "statement"
+}

@@ -1,0 +1,22 @@
+{
+  "description": "Mixed valid program with CRLF input and no final newline",
+  "rules": {
+    "list": 3,
+    "index": 6,
+    "break-stmt": 1
+  },
+  "layout": [
+    [
+      5,
+      "INDENT"
+    ],
+    [
+      6,
+      "DEDENT"
+    ]
+  ],
+  "counts": {
+    "NEWLINE": 4,
+    "EOF": 1
+  }
+}

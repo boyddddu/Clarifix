@@ -1,0 +1,56 @@
+Enter ClariFix source filename: Next token is: K_for, Next lexeme is for
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <for-stmt>
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: K_in, Next lexeme is in
+Next token is: LEFT_BRACKET, Next lexeme is [
+    Enter <iterable>
+     Enter <range>
+Next token is: SUBTRACT, Next lexeme is -
+      Enter <range-int>
+Next token is: CONST_INT, Next lexeme is 3
+Next token is: COMMA, Next lexeme is ,
+      Exit <range-int>
+Next token is: SUBTRACT, Next lexeme is -
+      Enter <range-int>
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: COMMA, Next lexeme is ,
+      Exit <range-int>
+Next token is: CONST_INT, Next lexeme is 2
+      Enter <range-int>
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+      Exit <range-int>
+Next token is: COLON, Next lexeme is :
+     Exit <range>
+    Exit <iterable>
+Next token is: NEWLINE, Next lexeme is 
+
+    Enter <block>
+Next token is: INDENT, Next lexeme is 
+
+Next token is: R_continue, Next lexeme is continue
+     Enter <statement>
+      Enter <simple-stmt>
+       Enter <continue-stmt>
+Next token is: PERIOD, Next lexeme is .
+       Exit <continue-stmt>
+      Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+     Exit <statement>
+Next token is: EOF, Next lexeme is EOF
+    Exit <block>
+   Exit <for-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.
+
+Token table report saved as: C06Output/C06_tokenTable.txt
+Syntax report saved as: C06Output/parserOutput.txt

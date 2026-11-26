@@ -1,0 +1,5 @@
+while true:
+  show "first skipped".
+    show "middle skipped".
+      show "last skipped".
+show "kept".

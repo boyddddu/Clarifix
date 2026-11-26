@@ -1,0 +1,21 @@
+Enter ClariFix source filename: Next token is: K_ask, Next lexeme is ask
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <ask-stmt>
+Next token is: IDENTIFIER, Next lexeme is name
+Next token is: PERIOD, Next lexeme is .
+   Exit <ask-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.
+
+Token table report saved as: B03Output/B03_tokenTable.txt
+Syntax report saved as: B03Output/parserOutput.txt

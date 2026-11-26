@@ -1,0 +1,11 @@
+{
+  "description": "A call result cannot be immediately indexed",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found LEFT_BRACKET"
+    ]
+  ],
+  "function": "primary"
+}

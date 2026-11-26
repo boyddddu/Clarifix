@@ -1,0 +1,11 @@
+{
+  "description": "A range permits at most three fields",
+  "syntax": [
+    [
+      1,
+      "E211",
+      "Expected RIGHT_BRACKET but found COMMA"
+    ]
+  ],
+  "function": "range"
+}

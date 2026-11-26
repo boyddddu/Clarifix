@@ -1,0 +1,9 @@
+set score.
+ask score.
+if score >= 75.5:
+    show "Passed".
+elif score >= 70.5:
+    show "Review".
+else:
+    show "Retry".
+show "Done".

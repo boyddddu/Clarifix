@@ -1,0 +1,11 @@
+{
+  "description": "An equality chain requires explicit grouping",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found EQUAL"
+    ]
+  ],
+  "function": "equality"
+}

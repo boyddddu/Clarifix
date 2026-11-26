@@ -1,0 +1,29 @@
+{
+  "description": "Recover after an invalid while header and skip its body",
+  "syntax": [
+    [
+      1,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"discard\""
+      ],
+      "following": "\"kept\"",
+      "dedent": null,
+      "skip": true
+    }
+  ],
+  "function": "while_stmt / synchronize"
+}

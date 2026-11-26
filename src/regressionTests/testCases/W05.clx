@@ -1,0 +1,6 @@
+set 12abc = 1.
+show "bad\q".
+show 'AB'.
+show 1.2zz.
+show "unterminated
+show "kept".

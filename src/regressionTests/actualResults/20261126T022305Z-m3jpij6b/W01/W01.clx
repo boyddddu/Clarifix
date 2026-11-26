@@ -1,0 +1,5 @@
+function add(a,b):
+    return a+b.
+set nums = {1,2}.
+show add(nums[0],nums[1]).
+call add(3,4).

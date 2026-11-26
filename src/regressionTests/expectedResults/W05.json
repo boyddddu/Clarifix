@@ -1,0 +1,70 @@
+{
+  "description": "Combined lexical errors, syntax errors, and subsequent valid statements",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found ERROR"
+    ],
+    [
+      2,
+      "E202",
+      "Expected an expression but found ERROR"
+    ],
+    [
+      3,
+      "E202",
+      "Expected an expression but found ERROR"
+    ],
+    [
+      4,
+      "E202",
+      "Expected an expression but found ERROR"
+    ],
+    [
+      5,
+      "E202",
+      "Expected an expression but found ERROR"
+    ]
+  ],
+  "lexical": [
+    [
+      1,
+      "E110",
+      "Name cannot start with a digit: 12abc"
+    ],
+    [
+      2,
+      "E112",
+      "Unknown escape sequence"
+    ],
+    [
+      3,
+      "E113",
+      "Invalid character literal"
+    ],
+    [
+      4,
+      "E111",
+      "Invalid decimal: 1.2zz"
+    ],
+    [
+      5,
+      "E102",
+      "Unclosed string literal"
+    ]
+  ],
+  "counts": {
+    "ERROR": 5
+  },
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 5,
+  "function": "lex / syntax_error / synchronize"
+}

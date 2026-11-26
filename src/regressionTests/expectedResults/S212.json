@@ -1,0 +1,11 @@
+{
+  "description": "Missing closing list brace",
+  "syntax": [
+    [
+      1,
+      "E212",
+      "Expected RIGHT_BRACE but found PERIOD"
+    ]
+  ],
+  "function": "list"
+}

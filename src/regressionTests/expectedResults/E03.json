@@ -1,0 +1,46 @@
+{
+  "description": "Subtraction chains in one left-associative additive production",
+  "children": [
+    [
+      "additive",
+      "20",
+      [
+        "term",
+        "term",
+        "term"
+      ]
+    ]
+  ],
+  "rules": {
+    "additive": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "CONST_INT",
+        "20"
+      ],
+      [
+        1,
+        "SUBTRACT",
+        "-"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "5"
+      ],
+      [
+        1,
+        "SUBTRACT",
+        "-"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,5 @@
+if true:
+	while false:
+		show "nested".
+    show "enclosing".
+show "global".

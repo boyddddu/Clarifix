@@ -1,0 +1,43 @@
+{
+  "description": "Valid nested blocks generate no diagnostics or recovery",
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"deep\"",
+      2
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"outer\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"global\"",
+      0
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ],
+  "recovery_count": 0,
+  "function": "block / lex"
+}

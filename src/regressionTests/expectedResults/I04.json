@@ -1,0 +1,46 @@
+{
+  "description": "Resume directly at global scope while preserving the enclosing DEDENT",
+  "lexical": [
+    [
+      3,
+      "E108",
+      "Bad indentation"
+    ]
+  ],
+  "syntax": [
+    [
+      3,
+      "E206",
+      "Expected INDENT but found ERROR"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"global\"",
+      0
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skipped\""
+      ],
+      "following": "\"global\"",
+      "dedent": "preserve",
+      "skip": true
+    }
+  ],
+  "function": "block / recover_malformed_body"
+}

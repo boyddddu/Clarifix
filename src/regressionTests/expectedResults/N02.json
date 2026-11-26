@@ -1,0 +1,37 @@
+{
+  "description": "Inline block comment is ignored by the expression grammar",
+  "sequences": [
+    [
+      [
+        1,
+        "CONST_INT",
+        "1"
+      ],
+      [
+        1,
+        "COMMENT",
+        "/* plus */"
+      ],
+      [
+        1,
+        "ADD",
+        "+"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ]
+    ]
+  ],
+  "children": [
+    [
+      "additive",
+      "1",
+      [
+        "term",
+        "term"
+      ]
+    ]
+  ]
+}

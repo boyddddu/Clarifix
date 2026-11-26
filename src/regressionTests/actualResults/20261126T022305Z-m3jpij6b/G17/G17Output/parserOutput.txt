@@ -1,0 +1,36 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_else, Next lexeme is else
+Enter <program>
+ Enter <statement>
+Error E200 at line 1: Unexpected token K_else
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: INDENT, Next lexeme is 
+
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: CONST_STRING, Next lexeme is "detached"
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E200: Unexpected token K_else
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

@@ -1,0 +1,8 @@
+{
+  "description": "While loop with assignment and break",
+  "rules": {
+    "while-stmt": 1,
+    "assign-stmt": 1,
+    "break-stmt": 1
+  }
+}

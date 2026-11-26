@@ -1,0 +1,11 @@
+{
+  "description": "Missing block indentation",
+  "syntax": [
+    [
+      2,
+      "E206",
+      "Expected INDENT but found K_show"
+    ]
+  ],
+  "function": "block"
+}

@@ -1,0 +1,55 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_for, Next lexeme is for
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <for-stmt>
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: K_in, Next lexeme is in
+Next token is: LEFT_BRACKET, Next lexeme is [
+    Enter <iterable>
+     Enter <range>
+Next token is: CONST_INT, Next lexeme is 1
+      Enter <range-int>
+Next token is: ADD, Next lexeme is +
+      Exit <range-int>
+Error E214 at line 1: Expected COMMA but found ADD
+     Exit <range>
+    Exit <iterable>
+   Exit <for-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: COMMA, Next lexeme is ,
+Next token is: CONST_INT, Next lexeme is 3
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: INDENT, Next lexeme is 
+
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Panic Mode: Recovery completed.
+
+Next token is: EOF, Next lexeme is EOF
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E214: Expected COMMA but found ADD
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

@@ -1,0 +1,11 @@
+{
+  "description": "Missing statement period",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ]
+  ],
+  "function": "statement"
+}

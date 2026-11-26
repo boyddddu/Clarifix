@@ -1,0 +1,20 @@
+{
+  "description": "Reach the next line after a malformed nested expression",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found RIGHT_PAREN"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "primary / additive / synchronize"
+}

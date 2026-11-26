@@ -1,0 +1,20 @@
+{
+  "description": "Exact section for a single missing period",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Valid statement\"",
+      0
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "syntax_error / writeSyntaxErrors"
+}

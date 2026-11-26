@@ -1,0 +1,43 @@
+{
+  "description": "Comment markers and noise words inside literals are ordinary text",
+  "counts": {
+    "COMMENT": 0,
+    "NOISE": 0
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_show",
+        "show"
+      ],
+      [
+        1,
+        "CONST_STRING",
+        "\"# /* the */\""
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ],
+    [
+      [
+        2,
+        "K_show",
+        "show"
+      ],
+      [
+        2,
+        "CONST_CHAR",
+        "'#'"
+      ],
+      [
+        2,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

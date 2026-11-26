@@ -1,0 +1,53 @@
+{
+  "description": "Relational and arithmetic operands bind before equality",
+  "children": [
+    [
+      "equality",
+      "2",
+      [
+        "relational",
+        "relational"
+      ]
+    ],
+    [
+      "relational",
+      "2",
+      [
+        "additive",
+        "additive"
+      ]
+    ],
+    [
+      "additive",
+      "2",
+      [
+        "term",
+        "term"
+      ]
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "GREATER_EQUAL",
+        ">="
+      ],
+      [
+        1,
+        "CONST_INT",
+        "4"
+      ],
+      [
+        1,
+        "NOT_EQUAL",
+        "!="
+      ],
+      [
+        1,
+        "CONST_BOOL",
+        "false"
+      ]
+    ]
+  ]
+}

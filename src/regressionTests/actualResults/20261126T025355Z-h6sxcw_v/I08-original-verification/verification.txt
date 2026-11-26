@@ -1,0 +1,9 @@
+PASS I08 against its original malformed elif input
+Original input: actualResults/20261126T024302Z-whtdvw8o/I08/I08.clx
+Binary: actualResults/20261126T025355Z-h6sxcw_v/clarifix-test
+1 original syntax errors, 1 eligible for storage, 0 lexical errors, 43 token rows.
+Parsed "first" at block depth 1.
+Parsed "later elif" at block depth 1.
+Parsed "later else" at block depth 1.
+Parsed "done" at block depth 0.
+1 completed recovery episodes.

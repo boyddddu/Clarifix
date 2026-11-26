@@ -1,0 +1,41 @@
+{
+  "description": "Tabs and spaces return to enclosing and global scopes",
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"nested\"",
+      2
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"enclosing\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"global\"",
+      0
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ]
+}

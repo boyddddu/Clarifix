@@ -1,0 +1,26 @@
+{
+  "description": "Declare a variable without an initializer",
+  "rules": {
+    "set-stmt": 1,
+    "expr": 0
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_set",
+        "set"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "score"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

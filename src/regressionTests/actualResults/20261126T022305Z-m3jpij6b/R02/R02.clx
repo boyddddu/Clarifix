@@ -1,0 +1,2 @@
+set = "discard" trailing.
+show "valid".

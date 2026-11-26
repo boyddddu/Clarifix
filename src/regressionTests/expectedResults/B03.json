@@ -1,0 +1,26 @@
+{
+  "description": "Read an identifier with ask",
+  "rules": {
+    "ask-stmt": 1,
+    "expr": 0
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_ask",
+        "ask"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "name"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

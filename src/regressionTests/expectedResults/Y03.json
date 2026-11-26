@@ -1,0 +1,9 @@
+{
+  "description": "Exact no-error section",
+  "rules": {
+    "set-stmt": 1,
+    "show-stmt": 1
+  },
+  "recovery_count": 0,
+  "function": "writeSyntaxErrors"
+}

@@ -1,0 +1,26 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_show               | show                                                         |
+| 1        | CONST_STRING         | "Pili ka sa regressionTests/testCases/ ng mga example tas di |
+|          |                      | to mo nalang i-paste sa test.clx"                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 3        | K_show               | show                                                         |
+| 3        | CONST_STRING         | "para test.clx nalang iinput mo  sa  terminal"               |
+| 3        | PERIOD               | .                                                            |
+| 3        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

@@ -1,0 +1,11 @@
+{
+  "description": "Unary plus is outside the negate production",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found ADD"
+    ]
+  ],
+  "function": "negate"
+}

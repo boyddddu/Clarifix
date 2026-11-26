@@ -1,0 +1,64 @@
+{
+  "description": "Reject an over-indented comment after a simple statement and recover",
+  "syntax": [
+    [
+      3,
+      "E207",
+      "Unexpected token INDENT"
+    ]
+  ],
+  "function": "lex / statement / synchronize",
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ],
+  "rules": {
+    "block": 1,
+    "show-stmt": 2
+  },
+  "sequences": [
+    [
+      [
+        3,
+        "COMMENT",
+        "# comment only"
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"before\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      1
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [],
+      "following": "\"after\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ]
+}

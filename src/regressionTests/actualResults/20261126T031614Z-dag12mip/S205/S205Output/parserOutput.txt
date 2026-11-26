@@ -1,0 +1,59 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_if, Next lexeme is if
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <if-stmt>
+Next token is: CONST_BOOL, Next lexeme is true
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: COLON, Next lexeme is :
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+Next token is: K_show, Next lexeme is show
+    Enter <block>
+Error E205 at line 1: Expected NEWLINE but found K_show
+    Exit <block>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+   Exit <if-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E205: Expected NEWLINE but found K_show
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

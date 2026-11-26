@@ -1,0 +1,33 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_set, Next lexeme is set
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <set-stmt>
+Next token is: ASSIGN, Next lexeme is =
+Error E201 at line 1: Expected IDENTIFIER but found ASSIGN
+   Exit <set-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E201: Expected IDENTIFIER but found ASSIGN
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

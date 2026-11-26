@@ -1,0 +1,30 @@
+{
+  "description": "Malformed block with no DEDENT terminates at EOF",
+  "lexical": [
+    [
+      2,
+      "E108",
+      "Bad indentation"
+    ]
+  ],
+  "syntax": [
+    [
+      2,
+      "E206",
+      "Expected INDENT but found ERROR"
+    ]
+  ],
+  "layout": [],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skipped\""
+      ],
+      "following": null,
+      "dedent": "none",
+      "eof": true,
+      "skip": true
+    }
+  ],
+  "function": "recover_malformed_body"
+}

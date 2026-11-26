@@ -1,0 +1,52 @@
+{
+  "description": "Syntax report includes original error, recovery token stream, and consolidated copy",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found ASSIGN"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"valid\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"discard\""
+      ],
+      "following": "\"valid\"",
+      "dedent": null
+    }
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "ASSIGN",
+        "="
+      ],
+      [
+        1,
+        "CONST_STRING",
+        "\"discard\""
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "trailing"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "function": "main / tracePrint / synchronize / writeSyntaxErrors"
+}

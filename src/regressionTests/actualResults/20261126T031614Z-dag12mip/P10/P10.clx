@@ -1,0 +1,7 @@
+if true
+    show "bad if".
+elif false:
+    show "bad elif".
+else:
+    show "bad else".
+show "kept".

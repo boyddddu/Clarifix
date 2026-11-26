@@ -1,0 +1,4 @@
+show "Missing period"
+show "Reached after the missing period".
+set = 2.
+show "Reached after the missing identifier".

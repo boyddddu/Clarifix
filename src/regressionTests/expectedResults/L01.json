@@ -1,0 +1,24 @@
+{
+  "description": "Empty list literal",
+  "children": [
+    [
+      "list",
+      "{",
+      []
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "LEFT_BRACE",
+        "{"
+      ],
+      [
+        1,
+        "RIGHT_BRACE",
+        "}"
+      ]
+    ]
+  ]
+}

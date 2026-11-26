@@ -1,0 +1,12 @@
+{
+  "description": "For loop over a list literal",
+  "children": [
+    [
+      "iterable",
+      "{",
+      [
+        "list"
+      ]
+    ]
+  ]
+}

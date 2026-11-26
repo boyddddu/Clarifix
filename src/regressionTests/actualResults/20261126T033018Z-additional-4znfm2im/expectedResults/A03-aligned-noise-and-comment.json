@@ -1,0 +1,49 @@
+{
+  "description": "Accept a correctly aligned noise word and block comment",
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      6,
+      "DEDENT"
+    ]
+  ],
+  "rules": {
+    "block": 1,
+    "show-stmt": 2
+  },
+  "counts": {
+    "NOISE": 1,
+    "COMMENT": 1
+  },
+  "sequences": [
+    [
+      [
+        3,
+        "NOISE",
+        "to"
+      ],
+      [
+        4,
+        "COMMENT",
+        "/* comment only */"
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"before\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      1
+    ]
+  ]
+}

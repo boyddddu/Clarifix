@@ -1,0 +1,43 @@
+{
+  "description": "Malformed nested block with an associated DEDENT",
+  "lexical": [
+    [
+      3,
+      "E108",
+      "Bad indentation"
+    ]
+  ],
+  "syntax": [
+    [
+      3,
+      "E206",
+      "Expected INDENT but found ERROR"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"enclosing\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"global\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"first skipped\"",
+        "\"also skipped\""
+      ],
+      "following": "\"enclosing\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ],
+  "function": "block / recover_malformed_body"
+}

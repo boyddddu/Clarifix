@@ -1,0 +1,22 @@
+{
+  "description": "Parse an arithmetic index on a compound assignment",
+  "children": [
+    [
+      "assign-stmt",
+      "values",
+      [
+        "index",
+        "assign-op",
+        "expr"
+      ]
+    ],
+    [
+      "additive",
+      "i",
+      [
+        "term",
+        "term"
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Parentheses place addition inside a multiplicative operand",
+  "rules": {
+    "expr": 2
+  },
+  "children": [
+    [
+      "term",
+      "(",
+      [
+        "negate",
+        "negate"
+      ]
+    ],
+    [
+      "additive",
+      "2",
+      [
+        "term",
+        "term"
+      ]
+    ]
+  ]
+}

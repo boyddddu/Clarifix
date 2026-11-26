@@ -1,0 +1,80 @@
+{
+  "description": "Skip both levels of a malformed else body and preserve enclosing and global statements",
+  "syntax": [
+    [
+      4,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "rules": {
+    "block": 2,
+    "while-stmt": 1,
+    "if-stmt": 1,
+    "show-stmt": 3
+  },
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "DEDENT"
+    ],
+    [
+      5,
+      "INDENT"
+    ],
+    [
+      6,
+      "INDENT"
+    ],
+    [
+      7,
+      "DEDENT"
+    ],
+    [
+      7,
+      "DEDENT"
+    ],
+    [
+      8,
+      "DEDENT"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"first\"",
+      2
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept outer\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept global\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skip\""
+      ],
+      "following": "\"kept outer\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ]
+}

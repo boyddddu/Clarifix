@@ -1,0 +1,53 @@
+Enter ClariFix source filename: Next token is: K_show, Next lexeme is show
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: CONST_STRING, Next lexeme is "before"
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <literal>
+Next token is: PERIOD, Next lexeme is .
+              Exit <literal>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Error E106: Unclosed block comment
+Next token is: ERROR, Next lexeme is /* starts
+ends at EOF
+ Exit <statement>
+ Enter <statement>
+Error E200 at line 2: Unexpected token ERROR
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: N04Output/N04_tokenTable.txt
+Syntax report saved as: N04Output/parserOutput.txt

@@ -1,0 +1,52 @@
+{
+  "description": "Reject a 33-character identifier and recover to the next statement",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found ERROR"
+    ]
+  ],
+  "lexical": [
+    [
+      1,
+      "E104",
+      "Identifier exceeds 32 characters: abcdefghijklmnopqrstuvwxyzabcdefg"
+    ]
+  ],
+  "rules": {
+    "set-stmt": 1,
+    "show-stmt": 1
+  },
+  "recovery_count": 1,
+  "counts": {
+    "ERROR": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "K_set",
+        "set"
+      ],
+      [
+        1,
+        "ERROR",
+        "abcdefghijklmnopqrstuvwxyzabcdefg"
+      ],
+      [
+        1,
+        "ASSIGN",
+        "="
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      0
+    ]
+  ]
+}

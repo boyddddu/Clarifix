@@ -1,0 +1,47 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+Line 1: Error E110: Name cannot start with a digit: 12abc
+Line 2: Error E112: Unknown escape sequence
+Line 3: Error E113: Invalid character literal
+Line 4: Error E111: Invalid decimal: 1.2zz
+Line 5: Error E102: Unclosed string literal
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_set                | set                                                          |
+| 1        | ERROR                | 12abc                                                        |
+| 1        | ASSIGN               | =                                                            |
+| 1        | CONST_INT            | 1                                                            |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_show               | show                                                         |
+| 2        | ERROR                | "bad\q"                                                      |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | K_show               | show                                                         |
+| 3        | ERROR                | 'AB'                                                         |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | K_show               | show                                                         |
+| 4        | ERROR                | 1.2zz                                                        |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | K_show               | show                                                         |
+| 5        | ERROR                | "unterminated                                                |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | K_show               | show                                                         |
+| 6        | CONST_STRING         | "kept"                                                       |
+| 6        | PERIOD               | .                                                            |
+| 6        | NEWLINE              | \n                                                           |
+| 7        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 5

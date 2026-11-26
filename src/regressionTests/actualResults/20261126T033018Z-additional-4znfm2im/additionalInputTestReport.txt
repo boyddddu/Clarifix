@@ -1,0 +1,60 @@
+ClariFix additional input test report
+Run completed in Asia/Manila: 2026-11-26T11:30:18+08:00
+Executed: 7/7 | Passed: 7 | Failed: 0
+Crashes: 0 | Timeouts: 0
+GCC: gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0 | Warnings: 0 | Errors: 0
+Source checksums matched before and after: True
+
+PASS A01-over-indented-noise — Reject an over-indented NOISE line and preserve the enclosing block
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: E207 on line 3
+  1 original syntax errors, 1 eligible for storage, 0 lexical errors, 18 token rows.
+  Parsed "before" at block depth 1.
+  Parsed "after" at block depth 1.
+  1 completed recovery episodes.
+
+PASS A02-over-indented-comment — Reject an over-indented COMMENT line and preserve the enclosing block
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: E207 on line 3
+  1 original syntax errors, 1 eligible for storage, 0 lexical errors, 18 token rows.
+  Parsed "before" at block depth 1.
+  Parsed "after" at block depth 1.
+  1 completed recovery episodes.
+
+PASS A03-aligned-noise-and-comment — Accept a correctly aligned noise word and block comment
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: none
+  0 original syntax errors, 0 eligible for storage, 0 lexical errors, 17 token rows.
+  Parsed "before" at block depth 1.
+  Parsed "after" at block depth 1.
+  0 completed recovery episodes.
+
+PASS A04-malformed-nested-else — Skip both levels of a malformed else body and preserve enclosing and global statements
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: E204 on line 4
+  1 original syntax errors, 1 eligible for storage, 0 lexical errors, 39 token rows.
+  Parsed "first" at block depth 2.
+  Parsed "kept outer" at block depth 1.
+  Parsed "kept global" at block depth 0.
+  1 completed recovery episodes.
+
+PASS A05-valid-nested-eof — Close two valid nested blocks at EOF with no final newline
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: none
+  0 original syntax errors, 0 eligible for storage, 0 lexical errors, 16 token rows.
+  Parsed "deep" at block depth 2.
+  0 completed recovery episodes.
+
+PASS A06-identifier-32 — Accept and preserve a 32-character identifier
+  Expected lexical diagnostics: none
+  Expected syntax diagnostics: none
+  0 original syntax errors, 0 eligible for storage, 0 lexical errors, 11 token rows.
+  Parsed abcdefghijklmnopqrstuvwxyzabcdef at block depth 0.
+  0 completed recovery episodes.
+
+PASS A07-identifier-33 — Reject a 33-character identifier and recover to the next statement
+  Expected lexical diagnostics: E104 on line 1
+  Expected syntax diagnostics: E201 on line 1
+  1 original syntax errors, 1 eligible for storage, 1 lexical errors, 11 token rows.
+  Parsed "after" at block depth 0.
+  1 completed recovery episodes.

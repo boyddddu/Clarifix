@@ -1,0 +1,11 @@
+{
+  "description": "Missing closing index bracket",
+  "syntax": [
+    [
+      1,
+      "E211",
+      "Expected RIGHT_BRACKET but found PERIOD"
+    ]
+  ],
+  "function": "index_expr"
+}

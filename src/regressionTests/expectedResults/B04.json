@@ -1,0 +1,31 @@
+{
+  "description": "Assign a variable to another variable",
+  "rules": {
+    "set-stmt": 2,
+    "assign-stmt": 1
+  },
+  "sequences": [
+    [
+      [
+        3,
+        "IDENTIFIER",
+        "a"
+      ],
+      [
+        3,
+        "ASSIGN",
+        "="
+      ],
+      [
+        3,
+        "IDENTIFIER",
+        "b"
+      ],
+      [
+        3,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ]
+}

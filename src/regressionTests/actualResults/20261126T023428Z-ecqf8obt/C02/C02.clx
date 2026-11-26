@@ -1,0 +1,4 @@
+if true:
+    show "then".
+else:
+    show "else".

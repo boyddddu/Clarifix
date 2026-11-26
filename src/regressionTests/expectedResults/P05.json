@@ -1,0 +1,26 @@
+{
+  "description": "Resume in a valid block after a malformed local statement",
+  "syntax": [
+    [
+      2,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ]
+  ],
+  "recovery_count": 1,
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept local\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept global\"",
+      0
+    ]
+  ],
+  "function": "block / synchronize"
+}

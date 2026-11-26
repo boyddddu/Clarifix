@@ -1,0 +1,38 @@
+{
+  "description": "Function with two parameters and a return value",
+  "rules": {
+    "function-stmt": 1,
+    "param-list": 1,
+    "return-stmt": 1,
+    "expr": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "LEFT_PAREN",
+        "("
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "a"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "b"
+      ],
+      [
+        1,
+        "RIGHT_PAREN",
+        ")"
+      ]
+    ]
+  ]
+}

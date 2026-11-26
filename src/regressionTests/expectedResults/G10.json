@@ -1,0 +1,11 @@
+{
+  "description": "A trailing function-argument comma needs another expression",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found RIGHT_PAREN"
+    ]
+  ],
+  "function": "arg_list"
+}

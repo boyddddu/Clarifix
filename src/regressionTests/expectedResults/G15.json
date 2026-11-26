@@ -1,0 +1,11 @@
+{
+  "description": "A for iterable cannot be a call expression",
+  "syntax": [
+    [
+      1,
+      "E204",
+      "Expected COLON but found LEFT_PAREN"
+    ]
+  ],
+  "function": "iterable"
+}

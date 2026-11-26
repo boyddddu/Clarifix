@@ -1,0 +1,158 @@
+{
+  "05-input.clx": {
+    "description": "Reject the extra decimal fragment and the unterminated ask statement",
+    "syntax": [
+      [1, "E203", "Expected PERIOD but found CONST_DECIMAL"],
+      [2, "E203", "Expected PERIOD but found EOF"]
+    ],
+    "rules": {"set-stmt": 1, "ask-stmt": 1},
+    "recovery_count": 2,
+    "sequences": [
+      [[1, "CONST_DECIMAL", "1.1"], [1, "CONST_DECIMAL", ".1"]],
+      [[2, "K_ask", "ask"], [2, "IDENTIFIER", "name"], [2, "EOF", "EOF"]]
+    ],
+    "assumption": "Leading-dot decimals are valid lexical tokens as defined in main.c. The unsupported combined form is a syntax error in this context.",
+    "function": "lex / set_stmt / ask_stmt / statement / synchronize"
+  },
+  "06-output-combined.clx": {
+    "description": "Parse a show expression combining a string and a variable",
+    "rules": {"set-stmt": 1, "show-stmt": 1},
+    "children": [["additive", "\"Hello, \"", ["term", "term"]]],
+    "sequences": [
+      [[2, "K_show", "show"], [2, "CONST_STRING", "\"Hello, \""], [2, "ADD", "+"], [2, "IDENTIFIER", "name"], [2, "PERIOD", "."]]
+    ]
+  },
+  "06-output-string.clx": {
+    "description": "Parse a show statement with a string literal",
+    "rules": {"show-stmt": 1},
+    "parsed": [["literal", "CONST_STRING", "\"hello world\"", 0]],
+    "sequences": [
+      [[1, "K_show", "show"], [1, "CONST_STRING", "\"hello world\""], [1, "PERIOD", "."]]
+    ]
+  },
+  "06-output-variable.clx": {
+    "description": "Parse a declaration followed by display of a variable",
+    "rules": {"set-stmt": 1, "show-stmt": 1},
+    "sequences": [
+      [[1, "IDENTIFIER", "score"], [1, "ASSIGN", "="], [1, "CONST_INT", "42"], [1, "PERIOD", "."]],
+      [[2, "K_show", "show"], [2, "IDENTIFIER", "score"], [2, "PERIOD", "."]]
+    ]
+  },
+  "07-assign-constant.clx": {
+    "description": "Assign an integer constant to a declared variable",
+    "rules": {"set-stmt": 1},
+    "children": [["assign-stmt", "a", ["assign-op", "expr"]]],
+    "sequences": [
+      [[2, "IDENTIFIER", "a"], [2, "ASSIGN", "="], [2, "CONST_INT", "1"], [2, "PERIOD", "."]]
+    ]
+  },
+  "07-assign-expression.clx": {
+    "description": "Parse arithmetic precedence in an assignment",
+    "rules": {"set-stmt": 2, "assign-stmt": 1},
+    "children": [
+      ["additive", "3", ["term", "term", "term"]],
+      ["term", "2", ["negate", "negate", "negate"]]
+    ],
+    "sequences": [
+      [[3, "CONST_INT", "3"], [3, "ADD", "+"], [3, "CONST_INT", "2"], [3, "MULTIPLY", "*"],
+       [3, "CONST_INT", "5"], [3, "DIVIDE", "/"], [3, "CONST_INT", "5"], [3, "ADD", "+"], [3, "IDENTIFIER", "c"]]
+    ]
+  },
+  "07-assign-variable.clx": {
+    "description": "Assign one declared variable to another",
+    "rules": {"set-stmt": 2},
+    "children": [["assign-stmt", "a", ["assign-op", "expr"]]],
+    "sequences": [
+      [[3, "IDENTIFIER", "a"], [3, "ASSIGN", "="], [3, "IDENTIFIER", "b"], [3, "PERIOD", "."]]
+    ]
+  },
+  "08-if-elif-elif-else.clx": {
+    "description": "Parse if, two elif clauses, and else as one conditional",
+    "rules": {"if-stmt": 1, "block": 4},
+    "counts": {"K_if": 1, "K_elif": 2, "K_else": 1},
+    "parsed": [
+      ["literal", "CONST_STRING", "\"Excellent\"", 1],
+      ["literal", "CONST_STRING", "\"Very good\"", 1],
+      ["literal", "CONST_STRING", "\"Passed\"", 1],
+      ["literal", "CONST_STRING", "\"Try again\"", 1]
+    ]
+  },
+  "08-if-else.clx": {
+    "description": "Parse an if and its else clause",
+    "rules": {"if-stmt": 1, "block": 2},
+    "counts": {"K_if": 1, "K_elif": 0, "K_else": 1},
+    "parsed": [
+      ["literal", "CONST_STRING", "\"Passed\"", 1],
+      ["literal", "CONST_STRING", "\"Try again\"", 1]
+    ]
+  },
+  "08-if.clx": {
+    "description": "Parse a standalone if with a comparison and indented body",
+    "rules": {"if-stmt": 1, "block": 1},
+    "parsed": [["literal", "CONST_STRING", "\"Passed\"", 1]],
+    "sequences": [
+      [[2, "K_if", "if"], [2, "IDENTIFIER", "score"], [2, "GREATER_EQUAL", ">="],
+       [2, "CONST_INT", "75"], [2, "COLON", ":"]]
+    ]
+  },
+  "09-for-nested.clx": {
+    "description": "Parse both loop ranges and return to the enclosing and global scopes",
+    "rules": {"for-stmt": 2, "block": 2, "range": 2, "range-int": 4, "show-stmt": 3},
+    "layout": [[2, "INDENT"], [3, "INDENT"], [4, "DEDENT"], [5, "DEDENT"]],
+    "parsed": [
+      ["primary", "IDENTIFIER", "column", 2],
+      ["primary", "IDENTIFIER", "row", 1],
+      ["literal", "CONST_STRING", "\"Done\"", 0]
+    ],
+    "sequences": [
+      [[3, "K_show", "show"], [3, "IDENTIFIER", "column"], [3, "PERIOD", "."]],
+      [[4, "K_show", "show"], [4, "IDENTIFIER", "row"], [4, "PERIOD", "."]]
+    ]
+  },
+  "09-for-plain.clx": {
+    "description": "Parse a two-integer range and one loop body",
+    "rules": {"for-stmt": 1, "block": 1, "show-stmt": 1},
+    "children": [["range", "[", ["range-int", "range-int"]]],
+    "sequences": [
+      [[1, "K_for", "for"], [1, "IDENTIFIER", "index"], [1, "K_in", "in"], [1, "LEFT_BRACKET", "["],
+       [1, "CONST_INT", "1"], [1, "COMMA", ","], [1, "CONST_INT", "3"], [1, "RIGHT_BRACKET", "]"], [1, "COLON", ":"]]
+    ]
+  },
+  "10-declare-list.clx": {
+    "description": "Declare a variable initialized with a three-element list",
+    "rules": {"set-stmt": 1, "list": 1},
+    "children": [["list", "{", ["expr", "expr", "expr"]]],
+    "sequences": [
+      [[1, "LEFT_BRACE", "{"], [1, "CONST_INT", "10"], [1, "COMMA", ","], [1, "CONST_INT", "20"],
+       [1, "COMMA", ","], [1, "CONST_INT", "30"], [1, "RIGHT_BRACE", "}"], [1, "PERIOD", "."]]
+    ]
+  },
+  "10-declare-single.clx": {
+    "description": "Declare a variable without an initializer",
+    "rules": {"set-stmt": 1, "expr": 0},
+    "sequences": [
+      [[1, "K_set", "set"], [1, "IDENTIFIER", "score"], [1, "PERIOD", "."]]
+    ]
+  },
+  "10-declare-with-initializer.clx": {
+    "description": "Declare a variable initialized with an integer",
+    "rules": {"set-stmt": 1, "expr": 1},
+    "sequences": [
+      [[1, "K_set", "set"], [1, "IDENTIFIER", "score"], [1, "ASSIGN", "="], [1, "CONST_INT", "42"], [1, "PERIOD", "."]]
+    ]
+  },
+  "11-panic-recovery.clx": {
+    "description": "Recover from two intentional syntax errors and parse both subsequent statements",
+    "syntax": [
+      [1, "E203", "Expected PERIOD but found NEWLINE"],
+      [3, "E201", "Expected IDENTIFIER but found ASSIGN"]
+    ],
+    "rules": {"set-stmt": 1, "show-stmt": 3},
+    "recovery_count": 2,
+    "parsed": [
+      ["literal", "CONST_STRING", "\"Reached after the missing period\"", 0],
+      ["literal", "CONST_STRING", "\"Reached after the missing identifier\"", 0]
+    ],
+    "function": "statement / set_stmt / synchronize"
+  }
+}

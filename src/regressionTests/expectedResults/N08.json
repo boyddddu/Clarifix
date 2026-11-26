@@ -1,0 +1,16 @@
+{
+  "description": "Blank lines and noise-only lines at global scope are ignored",
+  "counts": {
+    "NOISE": 2,
+    "NEWLINE": 1
+  },
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"after\"",
+      0
+    ]
+  ],
+  "layout": []
+}

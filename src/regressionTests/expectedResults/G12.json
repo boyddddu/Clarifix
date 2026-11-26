@@ -1,0 +1,11 @@
+{
+  "description": "A range requires at least two endpoints",
+  "syntax": [
+    [
+      1,
+      "E214",
+      "Expected COMMA but found RIGHT_BRACKET"
+    ]
+  ],
+  "function": "range"
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Missing while header colon",
+  "syntax": [
+    [
+      1,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "function": "while_stmt"
+}

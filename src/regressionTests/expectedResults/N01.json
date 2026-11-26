@@ -1,0 +1,36 @@
+{
+  "description": "Standalone and trailing line comments remain in the token table",
+  "sequences": [
+    [
+      [
+        1,
+        "COMMENT",
+        "# heading"
+      ]
+    ],
+    [
+      [
+        2,
+        "PERIOD",
+        "."
+      ],
+      [
+        2,
+        "COMMENT",
+        "# tail"
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"ok\"",
+      0
+    ]
+  ],
+  "counts": {
+    "COMMENT": 2,
+    "NEWLINE": 1
+  }
+}

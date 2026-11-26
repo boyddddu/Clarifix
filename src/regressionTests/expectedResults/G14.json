@@ -1,0 +1,11 @@
+{
+  "description": "A range endpoint cannot be an arithmetic expression",
+  "syntax": [
+    [
+      1,
+      "E214",
+      "Expected COMMA but found ADD"
+    ]
+  ],
+  "function": "range_int / range"
+}

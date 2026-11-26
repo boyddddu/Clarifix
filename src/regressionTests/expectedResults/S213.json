@@ -1,0 +1,11 @@
+{
+  "description": "Missing opening call parenthesis",
+  "syntax": [
+    [
+      1,
+      "E213",
+      "Expected LEFT_PAREN but found PERIOD"
+    ]
+  ],
+  "function": "call_args"
+}

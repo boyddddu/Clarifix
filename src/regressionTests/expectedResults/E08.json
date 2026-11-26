@@ -1,0 +1,57 @@
+{
+  "description": "Division, floor division and modulo chain at the term level",
+  "children": [
+    [
+      "term",
+      "24",
+      [
+        "negate",
+        "negate",
+        "negate",
+        "negate"
+      ]
+    ]
+  ],
+  "rules": {
+    "term": 1
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "CONST_INT",
+        "24"
+      ],
+      [
+        1,
+        "DIVIDE",
+        "/"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "3"
+      ],
+      [
+        1,
+        "FLOOR_DIVIDE",
+        "//"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ],
+      [
+        1,
+        "MODULO",
+        "%"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "5"
+      ]
+    ]
+  ]
+}

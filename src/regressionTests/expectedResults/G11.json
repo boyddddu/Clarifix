@@ -1,0 +1,11 @@
+{
+  "description": "A trailing parameter comma needs another identifier",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found RIGHT_PAREN"
+    ]
+  ],
+  "function": "param_list"
+}

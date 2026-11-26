@@ -1,0 +1,33 @@
+{
+  "description": "Input and branching around decimal and string literals",
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Passed\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Review\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Retry\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Done\"",
+      0
+    ]
+  ],
+  "rules": {
+    "ask-stmt": 1,
+    "block": 3
+  }
+}

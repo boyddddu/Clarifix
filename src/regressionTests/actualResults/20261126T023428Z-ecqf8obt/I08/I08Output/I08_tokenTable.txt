@@ -1,0 +1,64 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_if                 | if                                                           |
+| 1        | CONST_BOOL           | false                                                        |
+| 1        | COLON                | :                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 2        | K_show               | show                                                         |
+| 2        | CONST_STRING         | "first"                                                      |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | DEDENT               |                                                              |
+| 3        | K_elif               | elif                                                         |
+| 3        | CONST_BOOL           | false                                                        |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 4        | K_show               | show                                                         |
+| 4        | CONST_STRING         | "skipped"                                                    |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | DEDENT               |                                                              |
+| 5        | K_elif               | elif                                                         |
+| 5        | CONST_BOOL           | true                                                         |
+| 5        | COLON                | :                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 6        | K_show               | show                                                         |
+| 6        | CONST_STRING         | "later elif"                                                 |
+| 6        | PERIOD               | .                                                            |
+| 6        | NEWLINE              | \n                                                           |
+| 7        | DEDENT               |                                                              |
+| 7        | K_else               | else                                                         |
+| 7        | COLON                | :                                                            |
+| 7        | NEWLINE              | \n                                                           |
+| 8        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 8        | K_show               | show                                                         |
+| 8        | CONST_STRING         | "later else"                                                 |
+| 8        | PERIOD               | .                                                            |
+| 8        | NEWLINE              | \n                                                           |
+| 9        | DEDENT               |                                                              |
+| 9        | K_show               | show                                                         |
+| 9        | CONST_STRING         | "done"                                                       |
+| 9        | PERIOD               | .                                                            |
+| 9        | NEWLINE              | \n                                                           |
+| 10       | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

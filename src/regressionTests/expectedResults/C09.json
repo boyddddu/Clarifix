@@ -1,0 +1,9 @@
+{
+  "description": "Function with no parameters and a bare return",
+  "rules": {
+    "function-stmt": 1,
+    "return-stmt": 1,
+    "param-list": 0,
+    "expr": 0
+  }
+}

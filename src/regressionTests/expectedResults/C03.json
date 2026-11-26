@@ -1,0 +1,33 @@
+{
+  "description": "Several elif clauses followed by else",
+  "rules": {
+    "if-stmt": 1,
+    "block": 4
+  },
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"one\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"two\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"three\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"four\"",
+      1
+    ]
+  ]
+}

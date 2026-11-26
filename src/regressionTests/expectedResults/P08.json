@@ -1,0 +1,12 @@
+{
+  "description": "Recover at EOF after a missing period",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found EOF"
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "statement / synchronize"
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Scalar where iterable is required",
+  "syntax": [
+    [
+      1,
+      "E216",
+      "Expected an iterable but found CONST_INT"
+    ]
+  ],
+  "function": "iterable"
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Reject a list with a missing comma",
+  "syntax": [
+    [
+      1,
+      "E212",
+      "Expected RIGHT_BRACE but found CONST_INT"
+    ]
+  ],
+  "function": "list"
+}

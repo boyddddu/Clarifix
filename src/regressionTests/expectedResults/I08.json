@@ -1,0 +1,47 @@
+{
+  "description": "Malformed elif block preserves a later valid elif and else",
+  "syntax": [
+    [
+      3,
+      "E204",
+      "Expected COLON but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"first\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"later elif\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"later else\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"done\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"skipped\""
+      ],
+      "following": "\"later elif\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ],
+  "function": "if_stmt / skip_clause / skip_block"
+}

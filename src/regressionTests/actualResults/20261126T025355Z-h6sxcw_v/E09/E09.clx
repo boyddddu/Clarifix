@@ -1,0 +1,1 @@
+show format(12.5, "line\n", 'A').

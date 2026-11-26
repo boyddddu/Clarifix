@@ -1,0 +1,42 @@
+{
+  "description": "Unary minus binds outside exponentiation and can occur in the exponent",
+  "children": [
+    [
+      "negate",
+      "-",
+      [
+        "negate"
+      ]
+    ],
+    [
+      "negate",
+      "2",
+      [
+        "power"
+      ]
+    ],
+    [
+      "power",
+      "2",
+      [
+        "primary",
+        "negate"
+      ]
+    ],
+    [
+      "negate",
+      "3",
+      [
+        "power"
+      ]
+    ]
+  ],
+  "ancestors": [
+    [
+      "power",
+      "3",
+      "negate",
+      4
+    ]
+  ]
+}

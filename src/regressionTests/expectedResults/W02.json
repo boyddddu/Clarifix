@@ -1,0 +1,43 @@
+{
+  "description": "Nested loops with reassignment, conditional, and global output",
+  "rules": {
+    "for-stmt": 2,
+    "if-stmt": 1,
+    "continue-stmt": 1,
+    "assign-stmt": 1
+  },
+  "layout": [
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      4,
+      "INDENT"
+    ],
+    [
+      5,
+      "INDENT"
+    ],
+    [
+      6,
+      "DEDENT"
+    ],
+    [
+      7,
+      "INDENT"
+    ],
+    [
+      8,
+      "DEDENT"
+    ],
+    [
+      8,
+      "DEDENT"
+    ],
+    [
+      8,
+      "DEDENT"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Recognize decimal, escaped string, character, and call expression",
+  "rules": {
+    "call-args": 1,
+    "arg-list": 1,
+    "number": 1,
+    "literal": 3
+  },
+  "sequences": [
+    [
+      [
+        1,
+        "CONST_DECIMAL",
+        "12.5"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_STRING",
+        "\"line\\n\""
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_CHAR",
+        "'A'"
+      ]
+    ]
+  ]
+}

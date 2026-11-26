@@ -1,0 +1,11 @@
+{
+  "description": "A standalone else must have a preceding if",
+  "syntax": [
+    [
+      1,
+      "E200",
+      "Unexpected token K_else"
+    ]
+  ],
+  "function": "statement / if_stmt"
+}

@@ -1,0 +1,46 @@
+{
+  "description": "Recover from a lexical error surfaced as a parser ERROR token",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found ERROR"
+    ]
+  ],
+  "lexical": [
+    [
+      1,
+      "E103",
+      "Unsupported character: @"
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "K_show",
+        "show"
+      ],
+      [
+        1,
+        "ERROR",
+        "@"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "lex / primary / synchronize"
+}

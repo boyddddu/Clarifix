@@ -1,0 +1,29 @@
+{
+  "description": "Recover from an unexpected indented block",
+  "syntax": [
+    [
+      1,
+      "E207",
+      "Unexpected token INDENT"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"discard\""
+      ],
+      "following": "\"kept\"",
+      "dedent": null,
+      "skip": true
+    }
+  ],
+  "function": "program / synchronize / skip_block"
+}

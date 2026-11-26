@@ -1,0 +1,11 @@
+{
+  "description": "Unexpected top-level indentation",
+  "syntax": [
+    [
+      1,
+      "E207",
+      "Unexpected token INDENT"
+    ]
+  ],
+  "function": "statement"
+}

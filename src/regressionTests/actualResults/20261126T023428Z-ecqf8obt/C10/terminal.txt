@@ -1,0 +1,74 @@
+Enter ClariFix source filename: Next token is: K_function, Next lexeme is function
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <function-stmt>
+Next token is: IDENTIFIER, Next lexeme is add
+Next token is: LEFT_PAREN, Next lexeme is (
+Next token is: IDENTIFIER, Next lexeme is a
+    Enter <param-list>
+Next token is: COMMA, Next lexeme is ,
+Next token is: IDENTIFIER, Next lexeme is b
+Next token is: RIGHT_PAREN, Next lexeme is )
+    Exit <param-list>
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+    Enter <block>
+Next token is: INDENT, Next lexeme is 
+
+Next token is: K_return, Next lexeme is return
+     Enter <statement>
+      Enter <simple-stmt>
+       Enter <return-stmt>
+Next token is: IDENTIFIER, Next lexeme is a
+        Enter <expr>
+         Enter <or-expr>
+          Enter <and-expr>
+           Enter <equality>
+            Enter <relational>
+             Enter <additive>
+              Enter <term>
+               Enter <negate>
+                Enter <power>
+                 Enter <primary>
+Next token is: ADD, Next lexeme is +
+                 Exit <primary>
+                Exit <power>
+               Exit <negate>
+              Exit <term>
+Next token is: IDENTIFIER, Next lexeme is b
+              Enter <term>
+               Enter <negate>
+                Enter <power>
+                 Enter <primary>
+Next token is: PERIOD, Next lexeme is .
+                 Exit <primary>
+                Exit <power>
+               Exit <negate>
+              Exit <term>
+             Exit <additive>
+            Exit <relational>
+           Exit <equality>
+          Exit <and-expr>
+         Exit <or-expr>
+        Exit <expr>
+       Exit <return-stmt>
+      Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+     Exit <statement>
+Next token is: EOF, Next lexeme is EOF
+    Exit <block>
+   Exit <function-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.
+
+Token table report saved as: C10Output/C10_tokenTable.txt
+Syntax report saved as: C10Output/parserOutput.txt

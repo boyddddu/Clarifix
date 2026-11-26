@@ -1,0 +1,20 @@
+{
+  "description": "Recover at a period and resume on the same line",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "ask_stmt / synchronize"
+}

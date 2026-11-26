@@ -1,0 +1,56 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_for                | for                                                          |
+| 1        | IDENTIFIER           | row                                                          |
+| 1        | K_in                 | in                                                           |
+| 1        | LEFT_BRACKET         | [                                                            |
+| 1        | CONST_INT            | 1                                                            |
+| 1        | COMMA                | ,                                                            |
+| 1        | CONST_INT            | 2                                                            |
+| 1        | RIGHT_BRACKET        | ]                                                            |
+| 1        | COLON                | :                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 2        | K_for                | for                                                          |
+| 2        | IDENTIFIER           | column                                                       |
+| 2        | K_in                 | in                                                           |
+| 2        | LEFT_BRACKET         | [                                                            |
+| 2        | CONST_INT            | 1                                                            |
+| 2        | COMMA                | ,                                                            |
+| 2        | CONST_INT            | 3                                                            |
+| 2        | RIGHT_BRACKET        | ]                                                            |
+| 2        | COLON                | :                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 3        | K_show               | show                                                         |
+| 3        | IDENTIFIER           | column                                                       |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | DEDENT               |                                                              |
+| 4        | K_show               | show                                                         |
+| 4        | IDENTIFIER           | row                                                          |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | DEDENT               |                                                              |
+| 5        | K_show               | show                                                         |
+| 5        | CONST_STRING         | "Done"                                                       |
+| 5        | PERIOD               | .                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

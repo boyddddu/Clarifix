@@ -1,0 +1,20 @@
+{
+  "description": "Recover from a missing period at a newline",
+  "syntax": [
+    [
+      1,
+      "E203",
+      "Expected PERIOD but found NEWLINE"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 1,
+  "function": "statement / synchronize"
+}

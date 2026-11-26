@@ -1,0 +1,46 @@
+================================
+CLARIFIX SYNTAX ANALYSIS REPORT
+================================
+
+Next token is: K_for, Next lexeme is for
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <for-stmt>
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: LEFT_BRACKET, Next lexeme is [
+Error E217 at line 1: Expected K_in but found LEFT_BRACKET
+   Exit <for-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: COMMA, Next lexeme is ,
+Next token is: CONST_INT, Next lexeme is 2
+Next token is: RIGHT_BRACKET, Next lexeme is ]
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: INDENT, Next lexeme is 
+
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Panic Mode: Recovery completed.
+
+Next token is: EOF, Next lexeme is EOF
+Exit <program>
+
+---------------
+SYNTAX ERRORS
+---------------
+Line 1: Error E217: Expected K_in but found LEFT_BRACKET
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.

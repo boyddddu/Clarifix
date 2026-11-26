@@ -1,0 +1,63 @@
+{
+  "description": "List literal with expression elements",
+  "children": [
+    [
+      "list",
+      "{",
+      [
+        "expr",
+        "expr",
+        "expr"
+      ]
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "LEFT_BRACE",
+        "{"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "10"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ],
+      [
+        1,
+        "ADD",
+        "+"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "3"
+      ],
+      [
+        1,
+        "COMMA",
+        ","
+      ],
+      [
+        1,
+        "CONST_BOOL",
+        "true"
+      ],
+      [
+        1,
+        "RIGHT_BRACE",
+        "}"
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "description": "Mixed diagnostics, with lexical errors restricted to the table and terminal",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found ERROR"
+    ],
+    [
+      2,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ]
+  ],
+  "lexical": [
+    [
+      1,
+      "E103",
+      "Unsupported character: @"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"valid\"",
+      0
+    ]
+  ],
+  "recovery_count": 2,
+  "sequences": [
+    [
+      [
+        1,
+        "K_show",
+        "show"
+      ],
+      [
+        1,
+        "ERROR",
+        "@"
+      ],
+      [
+        1,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "function": "main / lex / writeTokenTable / writeSyntaxErrors"
+}

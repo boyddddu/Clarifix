@@ -1,0 +1,31 @@
+{
+  "description": "Record independent errors in order and continue",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      3,
+      "E202",
+      "Expected an expression but found PERIOD"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"middle\"",
+      0
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recovery_count": 2,
+  "function": "syntax_error / synchronize"
+}

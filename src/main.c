@@ -3,6 +3,10 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <sys/stat.h>  // For creating folders and checking file types
+#include <errno.h>     // For identifying why mkdir() failed
+#include <stdarg.h>  // Allows functions to accept a variable number of arguments
+
 #include "parser.h"
 
 /* Global declarations */
@@ -50,6 +54,9 @@ char errorMessages[MAX_ERRORS][200];
 int storedErrorCount = 0;
 
 FILE *in_fp;
+
+/* File pointer for the syntax analysis report */
+FILE *syntaxReport_fp = NULL;
 
 /* Function declarations */
 void addChar();
@@ -306,13 +313,46 @@ void storeError(int line, char *message)
     storedErrorCount++;
 }
 
+/* Print analysis messages to both the terminal and syntax report */
+void tracePrint(const char *format, ...)
+{
+    va_list args;
+
+    /* Initialize arguments and print to the terminal */
+    va_start(args, format);
+    vprintf(format, args);
+    va_end(args);
+
+    /* Write the same message to the syntax report if it is open */
+    if (syntaxReport_fp != NULL)
+    {
+        va_start(args, format);
+        vfprintf(syntaxReport_fp, format, args);
+        va_end(args);
+    }
+}
+
+
 /******************************************************/
 
-/*main*/
 int main(void)
 {
+    /* Stores the input source filename */
     char filename[100];
-    char reportFilename[120];
+
+    /* Stores the complete token table report path */
+    char reportFilename[250];
+
+    /* Stores the output folder name (testOutput) */
+    char outputFolder[120];
+
+    /* Stores the filename without its path and .clx extension */
+    char baseFilename[100];
+
+    /* Stores the complete syntax report path */
+    char syntaxReportFilename[250];
+
+    /* File pointer for the token table report */
     FILE *report_fp;
 
     do
@@ -341,39 +381,131 @@ int main(void)
 
     } while (1);
 
-    /* Process the source file */
-    /* Initialize lexical analysis */
-    indentStack[0] = 0;
-    getChar();
 
-    /* Start syntax analysis */
-    advance();
-    program();
+    /* ===== OUTPUT FOLDER CREATION ===== */
 
-    /* Display syntax analysis results */
-    printf("\nSyntax analysis completed.\n");
-    printf("Total Syntax Errors: %d\n", syntaxErrorCount);
+    /* Copy the source filename (test.clx) */
+    strcpy(outputFolder, filename);
 
-    if (syntaxErrorCount == 0)
+    /* Remove the .clx extension (test) */
+    outputFolder[strlen(outputFolder) - 4] = '\0';
+
+    /* Append "Output" to the folder name (testOutput) */
+    strcat(outputFolder, "Output");
+
+    /* Create the output folder */
+    if (mkdir(outputFolder, 0777) != 0)
     {
-        printf("No syntax errors found.\n");
+        /* Stores information about the existing path */
+        struct stat folderInfo;
+
+        /* Allow an existing directory; otherwise, report an error */
+        if (errno != EEXIST ||
+            stat(outputFolder, &folderInfo) != 0 ||
+            !S_ISDIR(folderInfo.st_mode))
+        {
+            printf("ERROR - Could not create output folder.\n");
+
+            /* Close the source file before terminating */
+            fclose(in_fp);
+
+            return 1;
+        }
+
+        /* If the folder already exists, reuse it */
+    }
+
+    /* ===== END OF OUTPUT FOLDER CREATION ===== */
+
+
+    /* ===== SYNTAX REPORT CREATION ===== */
+
+    /* Construct the syntax report path */
+    /* Example: testOutput/parserOutput.txt */
+    snprintf(syntaxReportFilename, sizeof(syntaxReportFilename),
+             "%s/parserOutput.txt", outputFolder);
+
+    /* Create or overwrite the syntax report BEFORE parsing */
+    syntaxReport_fp = fopen(syntaxReportFilename, "w");
+
+    if (syntaxReport_fp != NULL)
+    {
+        /* Write the report header */
+        fprintf(syntaxReport_fp, "================================\n");
+        fprintf(syntaxReport_fp, "CLARIFIX SYNTAX ANALYSIS REPORT\n");
+        fprintf(syntaxReport_fp, "================================\n\n");
     }
     else
     {
-        printf("Program contains syntax errors.\n");
+        /* Continue analysis even if the report cannot be created */
+        printf("ERROR - Could not create syntax report.\n");
     }
 
-    /* Remove the .clx extension and create the report filename */
-        strcpy(reportFilename, filename);
-        reportFilename[strlen(reportFilename) - 4] = '\0';
-        strcat(reportFilename, "_tokenTable.txt");
+    /* ===== END OF SYNTAX REPORT CREATION ===== */
 
-    /* Create the token table report */
+
+    /* ===== LEXICAL AND SYNTAX ANALYSIS ===== */
+
+    /* Initialize the base indentation level */
+    indentStack[0] = 0;
+
+    /* Read the first character of the source file */
+    getChar();
+
+    /* Retrieve the first token for the parser */
+    advance();
+
+    /* Start parsing from the <program> grammar rule */
+    program();
+
+    /* Write the collected syntax errors to the parser report */
+    if (syntaxReport_fp != NULL)
+    {
+        writeSyntaxErrors(syntaxReport_fp);
+    }
+
+    /* Display and record the syntax analysis summary */
+    tracePrint("\nSyntax analysis completed.\n");
+    tracePrint("Total Syntax Errors: %d\n", syntaxErrorCount);
+
+    /* Report the final syntax analysis result */
+    if (syntaxErrorCount == 0)
+    {
+        tracePrint("No syntax errors found.\n");
+    }
+    else
+    {
+        tracePrint("Program contains syntax errors.\n");
+    }
+
+    /* ===== TOKEN TABLE REPORT PATH CREATION ===== */
+
+    /* Find the last slash to separate the filename from its directory path */
+    char *base = strrchr(filename, '/');
+
+    /* Copy the filename without its directory path */
+    if (base != NULL)
+        strcpy(baseFilename, base + 1);
+    else
+        strcpy(baseFilename, filename);
+
+    /* Remove the .clx extension */
+    baseFilename[strlen(baseFilename) - 4] = '\0';
+
+    /* Construct the token table report path */
+    /* Example: testOutput/test_tokenTable.txt */
+    snprintf(reportFilename, sizeof(reportFilename),
+             "%s/%s_tokenTable.txt", outputFolder, baseFilename);
+
+    /* Create a new token table report or overwrite the existing one */
     report_fp = fopen(reportFilename, "w");
 
     if (report_fp != NULL)
     {
+        /* Write the lexical errors and token table */
         writeTokenTable(report_fp);
+
+        /* Close the token table report */
         fclose(report_fp);
 
         printf("\nToken table report saved as: %s\n", reportFilename);
@@ -383,6 +515,21 @@ int main(void)
         printf("\nERROR - Could not create token table report.\n");
     }
 
+
+    /* ===== CLOSE FILES ===== */
+
+    /* Close the syntax report after analysis */
+    if (syntaxReport_fp != NULL)
+    {
+        fclose(syntaxReport_fp);
+
+        /* Reset the pointer to prevent access to the closed file */
+        syntaxReport_fp = NULL;
+
+        printf("Syntax report saved as: %s\n", syntaxReportFilename);
+    }
+
+    /* Close the source file */
     fclose(in_fp);
 
     return 0;
@@ -742,7 +889,8 @@ char *lex()
 
         storeToken(lineNumber, nextToken, "");
 
-        printf("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
+        /* Display and record the current token and its lexeme */
+    tracePrint("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
 
         indentationError = 0;
         return nextToken;
@@ -786,7 +934,8 @@ char *lex()
         /* Store a readable newline representation in the token table */
         storeToken(lineNumber - 1, nextToken, "\\n");
 
-        printf("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
+        /* Display and record the current token and its lexeme */
+        tracePrint("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
         return nextToken;
 
     }
@@ -816,7 +965,8 @@ char *lex()
                   
                     storeToken(lineNumber, nextToken, lexeme);    /* Store the indentation token */
 
-                    printf("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
+                    /* Display and record the current token and its lexeme */
+                    tracePrint("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
                     return nextToken;
             }
             }
@@ -845,7 +995,8 @@ char *lex()
                     
                         storeToken(lineNumber, nextToken, lexeme);    /* Store the dedentation token */
 
-                        printf("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
+                        /* Display and record the current token and its lexeme */
+                        tracePrint("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
                         return nextToken;
                     }
 
@@ -864,7 +1015,8 @@ char *lex()
                         /* Store the error token */
                         storeToken(lineNumber, nextToken, lexeme);
 
-                        printf("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
+                        /* Display and record the current token and its lexeme */
+                        tracePrint("Next token is: %s, Next lexeme is %s\n", nextToken, lexeme);
 
                         return nextToken;
                     }
@@ -1474,8 +1626,8 @@ if ((strcmp(nextToken, COMMENT) == 0 ||
 {
     storeToken(commentStartLine, nextToken, commentLexeme);
 
-    printf("Next token is: %s, Next lexeme is %s\n",
-           nextToken, commentLexeme);
+    tracePrint("Next token is: %s, Next lexeme is %s\n",
+            nextToken, commentLexeme);
 
     /* Reset the block comment buffer after storing */
     commentLen = 0;
@@ -1485,8 +1637,8 @@ else
 {
     storeToken(lineNumber, nextToken, lexeme);
 
-    printf("Next token is: %s, Next lexeme is %s\n",
-           nextToken, lexeme);
+    tracePrint("Next token is: %s, Next lexeme is %s\n",
+            nextToken, lexeme);
 }
 
 return nextToken;

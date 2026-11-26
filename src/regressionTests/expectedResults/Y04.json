@@ -1,0 +1,544 @@
+{
+  "description": "105 recoverable errors, first 100 stored, with sanitizer verification",
+  "syntax": [
+    [
+      1,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      2,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      3,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      4,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      5,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      6,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      7,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      8,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      9,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      10,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      11,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      12,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      13,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      14,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      15,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      16,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      17,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      18,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      19,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      20,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      21,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      22,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      23,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      24,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      25,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      26,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      27,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      28,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      29,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      30,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      31,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      32,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      33,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      34,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      35,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      36,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      37,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      38,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      39,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      40,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      41,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      42,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      43,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      44,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      45,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      46,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      47,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      48,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      49,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      50,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      51,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      52,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      53,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      54,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      55,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      56,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      57,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      58,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      59,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      60,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      61,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      62,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      63,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      64,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      65,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      66,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      67,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      68,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      69,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      70,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      71,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      72,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      73,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      74,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      75,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      76,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      77,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      78,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      79,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      80,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      81,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      82,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      83,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      84,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      85,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      86,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      87,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      88,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      89,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      90,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      91,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      92,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      93,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      94,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      95,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      96,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      97,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      98,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      99,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      100,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      101,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      102,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      103,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      104,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ],
+    [
+      105,
+      "E201",
+      "Expected IDENTIFIER but found PERIOD"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"Done\"",
+      0
+    ]
+  ],
+  "rules": {
+    "ask-stmt": 105
+  },
+  "recovery_count": 105,
+  "sanitizer": true,
+  "function": "syntax_error / writeSyntaxErrors / synchronize"
+}

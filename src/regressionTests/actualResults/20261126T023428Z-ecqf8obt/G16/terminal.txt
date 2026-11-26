@@ -1,0 +1,25 @@
+Enter ClariFix source filename: Next token is: LEFT_BRACE, Next lexeme is {
+Enter <program>
+ Enter <statement>
+Error E200 at line 1: Unexpected token LEFT_BRACE
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: CONST_INT, Next lexeme is 1
+Next token is: COMMA, Next lexeme is ,
+Next token is: CONST_INT, Next lexeme is 2
+Next token is: RIGHT_BRACE, Next lexeme is }
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: G16Output/G16_tokenTable.txt
+Syntax report saved as: G16Output/parserOutput.txt

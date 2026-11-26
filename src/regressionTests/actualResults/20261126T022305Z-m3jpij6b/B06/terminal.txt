@@ -1,0 +1,76 @@
+Enter ClariFix source filename: Next token is: K_call, Next lexeme is call
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <call-stmt>
+Next token is: IDENTIFIER, Next lexeme is greet
+Next token is: LEFT_PAREN, Next lexeme is (
+    Enter <call-args>
+Next token is: CONST_STRING, Next lexeme is "Ana"
+     Enter <arg-list>
+      Enter <expr>
+       Enter <or-expr>
+        Enter <and-expr>
+         Enter <equality>
+          Enter <relational>
+           Enter <additive>
+            Enter <term>
+             Enter <negate>
+              Enter <power>
+               Enter <primary>
+                Enter <literal>
+Next token is: COMMA, Next lexeme is ,
+                Exit <literal>
+               Exit <primary>
+              Exit <power>
+             Exit <negate>
+            Exit <term>
+           Exit <additive>
+          Exit <relational>
+         Exit <equality>
+        Exit <and-expr>
+       Exit <or-expr>
+      Exit <expr>
+Next token is: CONST_INT, Next lexeme is 2
+      Enter <expr>
+       Enter <or-expr>
+        Enter <and-expr>
+         Enter <equality>
+          Enter <relational>
+           Enter <additive>
+            Enter <term>
+             Enter <negate>
+              Enter <power>
+               Enter <primary>
+                Enter <literal>
+                 Enter <number>
+Next token is: RIGHT_PAREN, Next lexeme is )
+                 Exit <number>
+                Exit <literal>
+               Exit <primary>
+              Exit <power>
+             Exit <negate>
+            Exit <term>
+           Exit <additive>
+          Exit <relational>
+         Exit <equality>
+        Exit <and-expr>
+       Exit <or-expr>
+      Exit <expr>
+     Exit <arg-list>
+Next token is: PERIOD, Next lexeme is .
+    Exit <call-args>
+   Exit <call-stmt>
+  Exit <simple-stmt>
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+ Exit <statement>
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 0
+No syntax errors found.
+
+Token table report saved as: B06Output/B06_tokenTable.txt
+Syntax report saved as: B06Output/parserOutput.txt

@@ -1,0 +1,11 @@
+{
+  "description": "Missing assignment operator",
+  "syntax": [
+    [
+      1,
+      "E209",
+      "Expected an assignment operator but found CONST_INT"
+    ]
+  ],
+  "function": "assign_op"
+}

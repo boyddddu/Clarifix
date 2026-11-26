@@ -1,0 +1,58 @@
+{
+  "description": "Close two valid nested blocks at EOF with no final newline",
+  "rules": {
+    "block": 2,
+    "while-stmt": 1,
+    "if-stmt": 1,
+    "show-stmt": 1
+  },
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "INDENT"
+    ],
+    [
+      3,
+      "DEDENT"
+    ],
+    [
+      3,
+      "DEDENT"
+    ]
+  ],
+  "counts": {
+    "NEWLINE": 2,
+    "EOF": 1
+  },
+  "sequences": [
+    [
+      [
+        3,
+        "DEDENT",
+        ""
+      ],
+      [
+        3,
+        "DEDENT",
+        ""
+      ],
+      [
+        3,
+        "EOF",
+        "EOF"
+      ]
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"deep\"",
+      2
+    ]
+  ]
+}

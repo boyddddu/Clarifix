@@ -1,0 +1,11 @@
+{
+  "description": "Reject a trailing list comma",
+  "syntax": [
+    [
+      1,
+      "E202",
+      "Expected an expression but found RIGHT_BRACE"
+    ]
+  ],
+  "function": "list"
+}

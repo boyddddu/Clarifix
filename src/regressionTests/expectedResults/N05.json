@@ -1,0 +1,76 @@
+{
+  "description": "Skip and report all four noise words",
+  "sequences": [
+    [
+      [
+        1,
+        "K_set",
+        "set"
+      ],
+      [
+        1,
+        "NOISE",
+        "the"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "count"
+      ],
+      [
+        1,
+        "ASSIGN",
+        "="
+      ],
+      [
+        1,
+        "NOISE",
+        "to"
+      ],
+      [
+        1,
+        "CONST_INT",
+        "2"
+      ]
+    ],
+    [
+      [
+        2,
+        "K_show",
+        "show"
+      ],
+      [
+        2,
+        "NOISE",
+        "then"
+      ],
+      [
+        2,
+        "NOISE",
+        "the"
+      ],
+      [
+        2,
+        "IDENTIFIER",
+        "count"
+      ],
+      [
+        2,
+        "NOISE",
+        "of"
+      ],
+      [
+        2,
+        "PERIOD",
+        "."
+      ]
+    ]
+  ],
+  "rules": {
+    "set-stmt": 1,
+    "show-stmt": 1
+  },
+  "counts": {
+    "NOISE": 5
+  }
+}

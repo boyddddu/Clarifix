@@ -62,13 +62,13 @@
    ```
    
 
-3. **Compile `main.c`:**
+3. **Compile and Run `main.c`:**
    
    ```bash
-   gcc main.c -o main
+   gcc main.c parser.c -o main && ./main
    ```
 
-4. **Run the compiled program:**
+4. **Enter the filename**
    ```bash
    ./main
 

@@ -1,0 +1,28 @@
+{
+  "description": "Handle all four compound assignment operators",
+  "rules": {
+    "assign-op": 4
+  },
+  "contexts": [
+    [
+      "ADD_ASSIGN",
+      "+=",
+      "assign-op"
+    ],
+    [
+      "SUB_ASSIGN",
+      "-=",
+      "assign-op"
+    ],
+    [
+      "MULTIPLY_ASSIGN",
+      "*=",
+      "assign-op"
+    ],
+    [
+      "DIVIDE_ASSIGN",
+      "/=",
+      "assign-op"
+    ]
+  ]
+}

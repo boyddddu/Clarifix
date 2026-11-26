@@ -1,0 +1,4 @@
+while true:
+    ask .
+    show "kept local".
+show "kept global".

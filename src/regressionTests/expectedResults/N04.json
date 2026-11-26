@@ -1,0 +1,29 @@
+{
+  "description": "Report an unclosed block comment on its opening line",
+  "syntax": [
+    [
+      2,
+      "E200",
+      "Unexpected token ERROR"
+    ]
+  ],
+  "function": "lex / advance",
+  "lexical": [
+    [
+      2,
+      "E106",
+      "Unclosed block comment"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"before\"",
+      0
+    ]
+  ],
+  "counts": {
+    "ERROR": 1
+  }
+}

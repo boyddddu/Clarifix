@@ -1,0 +1,8 @@
+set total=0.
+for i in [1,3]:
+    for j in [1,2]:
+        if j == 2:
+            total += i*j.
+        else:
+            continue.
+show total.

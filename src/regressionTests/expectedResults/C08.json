@@ -1,0 +1,12 @@
+{
+  "description": "For loop over an indexed iterable",
+  "children": [
+    [
+      "iterable",
+      "items",
+      [
+        "index"
+      ]
+    ]
+  ]
+}

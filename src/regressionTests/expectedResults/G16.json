@@ -1,0 +1,11 @@
+{
+  "description": "A standalone list value is not a statement",
+  "syntax": [
+    [
+      1,
+      "E200",
+      "Unexpected token LEFT_BRACE"
+    ]
+  ],
+  "function": "statement"
+}

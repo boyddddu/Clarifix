@@ -1,0 +1,73 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_set                | set                                                          |
+| 1        | IDENTIFIER           | score                                                        |
+| 1        | ASSIGN               | =                                                            |
+| 1        | CONST_INT            | 85                                                           |
+| 1        | PERIOD               | .                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | K_if                 | if                                                           |
+| 2        | IDENTIFIER           | score                                                        |
+| 2        | GREATER_EQUAL        | >=                                                           |
+| 2        | CONST_INT            | 90                                                           |
+| 2        | COLON                | :                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 3        | K_show               | show                                                         |
+| 3        | CONST_STRING         | "Excellent"                                                  |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | DEDENT               |                                                              |
+| 4        | K_elif               | elif                                                         |
+| 4        | IDENTIFIER           | score                                                        |
+| 4        | GREATER_EQUAL        | >=                                                           |
+| 4        | CONST_INT            | 80                                                           |
+| 4        | COLON                | :                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 5        | K_show               | show                                                         |
+| 5        | CONST_STRING         | "Very good"                                                  |
+| 5        | PERIOD               | .                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | DEDENT               |                                                              |
+| 6        | K_elif               | elif                                                         |
+| 6        | IDENTIFIER           | score                                                        |
+| 6        | GREATER_EQUAL        | >=                                                           |
+| 6        | CONST_INT            | 75                                                           |
+| 6        | COLON                | :                                                            |
+| 6        | NEWLINE              | \n                                                           |
+| 7        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 7        | K_show               | show                                                         |
+| 7        | CONST_STRING         | "Passed"                                                     |
+| 7        | PERIOD               | .                                                            |
+| 7        | NEWLINE              | \n                                                           |
+| 8        | DEDENT               |                                                              |
+| 8        | K_else               | else                                                         |
+| 8        | COLON                | :                                                            |
+| 8        | NEWLINE              | \n                                                           |
+| 9        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 9        | K_show               | show                                                         |
+| 9        | CONST_STRING         | "Try again"                                                  |
+| 9        | PERIOD               | .                                                            |
+| 9        | NEWLINE              | \n                                                           |
+| 10       | DEDENT               |                                                              |
+| 10       | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

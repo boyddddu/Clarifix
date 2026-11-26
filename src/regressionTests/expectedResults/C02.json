@@ -1,0 +1,39 @@
+{
+  "description": "If and else clauses",
+  "rules": {
+    "if-stmt": 1,
+    "block": 2
+  },
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"then\"",
+      1
+    ],
+    [
+      "literal",
+      "CONST_STRING",
+      "\"else\"",
+      1
+    ]
+  ],
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "DEDENT"
+    ],
+    [
+      4,
+      "INDENT"
+    ],
+    [
+      5,
+      "DEDENT"
+    ]
+  ]
+}

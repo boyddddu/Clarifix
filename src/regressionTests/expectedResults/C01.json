@@ -1,0 +1,25 @@
+{
+  "description": "One if body with four-space indentation",
+  "rules": {
+    "if-stmt": 1,
+    "block": 1
+  },
+  "layout": [
+    [
+      2,
+      "INDENT"
+    ],
+    [
+      3,
+      "DEDENT"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"if body\"",
+      1
+    ]
+  ]
+}

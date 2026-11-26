@@ -1,0 +1,99 @@
+Enter ClariFix source filename: Next token is: K_show, Next lexeme is show
+Enter <program>
+ Enter <statement>
+  Enter <simple-stmt>
+   Enter <show-stmt>
+Next token is: LEFT_BRACE, Next lexeme is {
+    Enter <expr>
+     Enter <or-expr>
+      Enter <and-expr>
+       Enter <equality>
+        Enter <relational>
+         Enter <additive>
+          Enter <term>
+           Enter <negate>
+            Enter <power>
+             Enter <primary>
+              Enter <list>
+Next token is: CONST_INT, Next lexeme is 1
+               Enter <expr>
+                Enter <or-expr>
+                 Enter <and-expr>
+                  Enter <equality>
+                   Enter <relational>
+                    Enter <additive>
+                     Enter <term>
+                      Enter <negate>
+                       Enter <power>
+                        Enter <primary>
+                         Enter <literal>
+                          Enter <number>
+Next token is: COMMA, Next lexeme is ,
+                          Exit <number>
+                         Exit <literal>
+                        Exit <primary>
+                       Exit <power>
+                      Exit <negate>
+                     Exit <term>
+                    Exit <additive>
+                   Exit <relational>
+                  Exit <equality>
+                 Exit <and-expr>
+                Exit <or-expr>
+               Exit <expr>
+Next token is: CONST_INT, Next lexeme is 2
+               Enter <expr>
+                Enter <or-expr>
+                 Enter <and-expr>
+                  Enter <equality>
+                   Enter <relational>
+                    Enter <additive>
+                     Enter <term>
+                      Enter <negate>
+                       Enter <power>
+                        Enter <primary>
+                         Enter <literal>
+                          Enter <number>
+Next token is: PERIOD, Next lexeme is .
+                          Exit <number>
+                         Exit <literal>
+                        Exit <primary>
+                       Exit <power>
+                      Exit <negate>
+                     Exit <term>
+                    Exit <additive>
+                   Exit <relational>
+                  Exit <equality>
+                 Exit <and-expr>
+                Exit <or-expr>
+               Exit <expr>
+Error E212 at line 1: Expected RIGHT_BRACE but found PERIOD
+              Exit <list>
+             Exit <primary>
+            Exit <power>
+           Exit <negate>
+          Exit <term>
+         Exit <additive>
+        Exit <relational>
+       Exit <equality>
+      Exit <and-expr>
+     Exit <or-expr>
+    Exit <expr>
+   Exit <show-stmt>
+  Exit <simple-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: EOF, Next lexeme is EOF
+Panic Mode: Recovery completed.
+
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: S212Output/S212_tokenTable.txt
+Syntax report saved as: S212Output/parserOutput.txt

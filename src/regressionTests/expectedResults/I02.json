@@ -1,0 +1,43 @@
+{
+  "description": "Multiple invalid indentation levels yield one syntax error for the region",
+  "lexical": [
+    [
+      2,
+      "E108",
+      "Bad indentation"
+    ],
+    [
+      4,
+      "E108",
+      "Bad indentation"
+    ]
+  ],
+  "syntax": [
+    [
+      2,
+      "E206",
+      "Expected INDENT but found ERROR"
+    ]
+  ],
+  "parsed": [
+    [
+      "literal",
+      "CONST_STRING",
+      "\"kept\"",
+      0
+    ]
+  ],
+  "recoveries": [
+    {
+      "inside": [
+        "\"first skipped\"",
+        "\"middle skipped\"",
+        "\"last skipped\""
+      ],
+      "following": "\"kept\"",
+      "dedent": "consume",
+      "skip": true
+    }
+  ],
+  "function": "lex / recover_malformed_body"
+}

@@ -1,0 +1,5 @@
+set score = 70.
+if score >= 75:
+    show "Passed".
+else:
+    show "Try again".

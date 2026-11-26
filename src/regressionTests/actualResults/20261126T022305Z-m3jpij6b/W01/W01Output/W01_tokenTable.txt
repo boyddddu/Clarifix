@@ -1,0 +1,70 @@
+================================
+CLARIFIX LEXICAL ANALYSIS REPORT
+================================
+
+---------------
+LEXICAL ERRORS
+---------------
+No lexical errors found.
+
+TOKEN TABLE
+-----------
++----------+----------------------+--------------------------------------------------------------+
+| Line     | Token                | Lexeme                                                       |
++----------+----------------------+--------------------------------------------------------------+
+| 1        | K_function           | function                                                     |
+| 1        | IDENTIFIER           | add                                                          |
+| 1        | LEFT_PAREN           | (                                                            |
+| 1        | IDENTIFIER           | a                                                            |
+| 1        | COMMA                | ,                                                            |
+| 1        | IDENTIFIER           | b                                                            |
+| 1        | RIGHT_PAREN          | )                                                            |
+| 1        | COLON                | :                                                            |
+| 1        | NEWLINE              | \n                                                           |
+| 2        | INDENT               |                                                              |
+|          |                      |                                                              |
+| 2        | K_return             | return                                                       |
+| 2        | IDENTIFIER           | a                                                            |
+| 2        | ADD                  | +                                                            |
+| 2        | IDENTIFIER           | b                                                            |
+| 2        | PERIOD               | .                                                            |
+| 2        | NEWLINE              | \n                                                           |
+| 3        | DEDENT               |                                                              |
+| 3        | K_set                | set                                                          |
+| 3        | IDENTIFIER           | nums                                                         |
+| 3        | ASSIGN               | =                                                            |
+| 3        | LEFT_BRACE           | {                                                            |
+| 3        | CONST_INT            | 1                                                            |
+| 3        | COMMA                | ,                                                            |
+| 3        | CONST_INT            | 2                                                            |
+| 3        | RIGHT_BRACE          | }                                                            |
+| 3        | PERIOD               | .                                                            |
+| 3        | NEWLINE              | \n                                                           |
+| 4        | K_show               | show                                                         |
+| 4        | IDENTIFIER           | add                                                          |
+| 4        | LEFT_PAREN           | (                                                            |
+| 4        | IDENTIFIER           | nums                                                         |
+| 4        | LEFT_BRACKET         | [                                                            |
+| 4        | CONST_INT            | 0                                                            |
+| 4        | RIGHT_BRACKET        | ]                                                            |
+| 4        | COMMA                | ,                                                            |
+| 4        | IDENTIFIER           | nums                                                         |
+| 4        | LEFT_BRACKET         | [                                                            |
+| 4        | CONST_INT            | 1                                                            |
+| 4        | RIGHT_BRACKET        | ]                                                            |
+| 4        | RIGHT_PAREN          | )                                                            |
+| 4        | PERIOD               | .                                                            |
+| 4        | NEWLINE              | \n                                                           |
+| 5        | K_call               | call                                                         |
+| 5        | IDENTIFIER           | add                                                          |
+| 5        | LEFT_PAREN           | (                                                            |
+| 5        | CONST_INT            | 3                                                            |
+| 5        | COMMA                | ,                                                            |
+| 5        | CONST_INT            | 4                                                            |
+| 5        | RIGHT_PAREN          | )                                                            |
+| 5        | PERIOD               | .                                                            |
+| 5        | NEWLINE              | \n                                                           |
+| 6        | EOF                  | EOF                                                          |
++----------+----------------------+--------------------------------------------------------------+
+
+Total Errors: 0

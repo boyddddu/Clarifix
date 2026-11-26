@@ -1,0 +1,11 @@
+{
+  "description": "Missing closing parenthesis",
+  "syntax": [
+    [
+      1,
+      "E210",
+      "Expected RIGHT_PAREN but found PERIOD"
+    ]
+  ],
+  "function": "primary"
+}

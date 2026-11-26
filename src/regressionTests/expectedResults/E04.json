@@ -1,0 +1,36 @@
+{
+  "description": "Exponentiation is right-recursive",
+  "children": [
+    [
+      "power",
+      "2",
+      [
+        "primary",
+        "negate"
+      ]
+    ],
+    [
+      "power",
+      "3",
+      [
+        "primary",
+        "negate"
+      ]
+    ],
+    [
+      "power",
+      "4",
+      [
+        "primary"
+      ]
+    ]
+  ],
+  "ancestors": [
+    [
+      "power",
+      "4",
+      "power",
+      2
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "description": "For loop over a two-integer range",
+  "children": [
+    [
+      "range",
+      "[",
+      [
+        "range-int",
+        "range-int"
+      ]
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "K_for",
+        "for"
+      ],
+      [
+        1,
+        "IDENTIFIER",
+        "i"
+      ],
+      [
+        1,
+        "K_in",
+        "in"
+      ]
+    ]
+  ]
+}

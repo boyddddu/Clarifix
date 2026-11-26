@@ -1,0 +1,16 @@
+{
+  "description": "Parse two chained indices on an expression",
+  "children": [
+    [
+      "primary",
+      "matrix",
+      [
+        "index",
+        "index"
+      ]
+    ]
+  ],
+  "rules": {
+    "index": 2
+  }
+}

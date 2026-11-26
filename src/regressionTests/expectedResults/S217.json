@@ -1,0 +1,11 @@
+{
+  "description": "Missing in keyword for a range",
+  "syntax": [
+    [
+      1,
+      "E217",
+      "Expected K_in but found LEFT_BRACKET"
+    ]
+  ],
+  "function": "for_stmt"
+}

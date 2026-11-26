@@ -1,0 +1,41 @@
+Enter ClariFix source filename: Next token is: K_for, Next lexeme is for
+Enter <program>
+ Enter <statement>
+  Enter <compound-stmt>
+   Enter <for-stmt>
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: K_in, Next lexeme is in
+Next token is: IDENTIFIER, Next lexeme is values
+    Enter <iterable>
+Next token is: LEFT_PAREN, Next lexeme is (
+    Exit <iterable>
+Error E204 at line 1: Expected COLON but found LEFT_PAREN
+   Exit <for-stmt>
+  Exit <compound-stmt>
+ Exit <statement>
+
+Panic Mode: Recovering...
+Next token is: RIGHT_PAREN, Next lexeme is )
+Next token is: COLON, Next lexeme is :
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: INDENT, Next lexeme is 
+
+Panic Mode: Skipping malformed block.
+Next token is: K_show, Next lexeme is show
+Next token is: IDENTIFIER, Next lexeme is i
+Next token is: PERIOD, Next lexeme is .
+Next token is: NEWLINE, Next lexeme is 
+
+Next token is: DEDENT, Next lexeme is 
+Panic Mode: Recovery completed.
+
+Next token is: EOF, Next lexeme is EOF
+Exit <program>
+
+Syntax analysis completed.
+Total Syntax Errors: 1
+Program contains syntax errors.
+
+Token table report saved as: G15Output/G15_tokenTable.txt
+Syntax report saved as: G15Output/parserOutput.txt

@@ -1,0 +1,62 @@
+{
+  "description": "NOT, AND and OR use distinct precedence levels",
+  "children": [
+    [
+      "or-expr",
+      "!",
+      [
+        "and-expr",
+        "and-expr"
+      ]
+    ],
+    [
+      "and-expr",
+      "true",
+      [
+        "equality",
+        "equality"
+      ]
+    ],
+    [
+      "negate",
+      "!",
+      [
+        "negate"
+      ]
+    ]
+  ],
+  "sequences": [
+    [
+      [
+        1,
+        "NOT",
+        "!"
+      ],
+      [
+        1,
+        "CONST_BOOL",
+        "false"
+      ],
+      [
+        1,
+        "OR",
+        "||"
+      ],
+      [
+        1,
+        "CONST_BOOL",
+        "true"
+      ],
+      [
+        1,
+        "AND",
+        "&&"
+      ],
+      [
+        1,
+        "CONST_BOOL",
+        "false"
+      ]
+    ]
+  ]
+}
